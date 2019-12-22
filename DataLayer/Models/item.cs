@@ -6,5 +6,9 @@ namespace DataLayer.Models
 {
     public class item
     {
+        public int id { get; set; }
+        public string name { get; set; }
+        public int is_active { get; set; }
+
     }
 }

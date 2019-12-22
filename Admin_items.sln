@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admin_items", "Admin_items\Admin_items.csproj", "{DEDF8349-AC59-4C34-9867-4FC674C4C694}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "db_lib", "db_lib\db_lib.csproj", "{1D5ACDF6-8600-4702-8B8C-95CA415EC3D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "db_lib", "db_lib\db_lib.csproj", "{1D5ACDF6-8600-4702-8B8C-95CA415EC3D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{C4CB54C9-689E-4F58-8407-597FA80BE0EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataLayer", "DataLayer\DataLayer.csproj", "{C4CB54C9-689E-4F58-8407-597FA80BE0EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

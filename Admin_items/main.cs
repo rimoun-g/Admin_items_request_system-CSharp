@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Admin_items.Forms.AdminToolsForms.subForms;
 namespace Admin_items
 {
     static class main
@@ -12,7 +12,7 @@ namespace Admin_items
         [STAThread]
         static void Main()
         {
-            Application.Run(new test());
+            Application.Run(new frmItems());
         }
     }
 }

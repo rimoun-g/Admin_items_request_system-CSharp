@@ -4,17 +4,13 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <WarningLevel>3</WarningLevel>
-  </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.30" />
     <PackageReference Include="System.Data.SQLite.Core" Version="1.0.112" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\db_lib\db_lib.csproj" />
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj" />
   </ItemGroup>
 
 </Project>

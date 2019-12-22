@@ -42,6 +42,25 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppLayer\Items.cs" />
+    <Compile Include="Forms\AdminToolsForms\AdministratorTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminToolsForms\AdministratorTools.Designer.cs">
+      <DependentUpon>AdministratorTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminToolsForms\subForms\frmItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminToolsForms\subForms\frmItems.Designer.cs">
+      <DependentUpon>frmItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminToolsForms\subForms\frmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminToolsForms\subForms\frmUsers.Designer.cs">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="main.cs" />
     <Compile Include="test.cs">
       <SubType>Form</SubType>
@@ -64,6 +83,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\AdminToolsForms\AdministratorTools.resx">
+      <DependentUpon>AdministratorTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminToolsForms\subForms\frmItems.resx">
+      <DependentUpon>frmItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminToolsForms\subForms\frmUsers.resx">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="test.resx">
       <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
@@ -74,7 +102,7 @@
       <Name>DataLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\db_lib\db_lib.csproj">
-      <Project>{1d5acdf6-8600-4702-8b8c-95ca415ec3d9}</Project>
+      <Project>{1D5ACDF6-8600-4702-8B8C-95CA415EC3D9}</Project>
       <Name>db_lib</Name>
     </ProjectReference>
   </ItemGroup>
