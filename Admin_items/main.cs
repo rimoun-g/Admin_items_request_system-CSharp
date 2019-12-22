@@ -12,7 +12,7 @@ namespace Admin_items
         [STAThread]
         static void Main()
         {
-            Application.Run(new frmItems());
+            Application.Run(new frmSubcat());
         }
     }
 }

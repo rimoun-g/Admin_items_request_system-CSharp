@@ -55,6 +55,12 @@
     <Compile Include="Forms\AdminToolsForms\subForms\frmItems.Designer.cs">
       <DependentUpon>frmItems.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AdminToolsForms\subForms\frmSubcat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminToolsForms\subForms\frmSubcat.Designer.cs">
+      <DependentUpon>frmSubcat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AdminToolsForms\subForms\frmUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminToolsForms\subForms\frmItems.resx">
       <DependentUpon>frmItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminToolsForms\subForms\frmSubcat.resx">
+      <DependentUpon>frmSubcat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminToolsForms\subForms\frmUsers.resx">
       <DependentUpon>frmUsers.cs</DependentUpon>
