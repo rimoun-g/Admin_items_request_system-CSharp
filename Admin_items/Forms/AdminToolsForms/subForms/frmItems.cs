@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Admin_items.AppLayer;
+using DataLayer.Models;
 
 namespace Admin_items.Forms.AdminToolsForms.subForms
 {
@@ -32,8 +33,8 @@ namespace Admin_items.Forms.AdminToolsForms.subForms
 
         public void FillComboBox()
         {
-            var all_items = items.GetllALLITEMS();
-            if (all_items.Count() > 0)
+            var all_items = items.Items_Names();
+            if (all_items is null == false)
             {
                 cmbxDeleteItem.DataSource = all_items;
             }
@@ -41,7 +42,48 @@ namespace Admin_items.Forms.AdminToolsForms.subForms
 
         private void cmbxDeleteItem_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cmbxDeleteItem.Text != "")
+            {
 
+                item curr_item = items.item_by_name(cmbxDeleteItem.Text);
+
+                if (curr_item.is_active == 1)
+                {
+                    btnDeleteItem.Enabled = true;
+                    btnUndeleteItem.Enabled = false;
+                }
+                else
+                {
+                    btnUndeleteItem.Enabled = true;
+                    btnDeleteItem.Enabled = false;
+                }
+
+            }
+
+
+        }
+
+        private void btnDeleteItem_Click(object sender, EventArgs e)
+        {
+            item curr_item = items.item_by_name(cmbxDeleteItem.Text);
+            items.UpdateItem(curr_item);
+            FillComboBox();
+            
+        }
+
+        private void btnUndeleteItem_Click(object sender, EventArgs e)
+        {
+            item curr_item = items.item_by_name(cmbxDeleteItem.Text);
+            items.UndoUpdateItem(curr_item);
+            FillComboBox();
+            
+        }
+
+        private void btnUpdateItem_Click(object sender, EventArgs e)
+        {
+            item curr_item = items.item_by_name(cmbxDeleteItem.Text);
+            items.UpdateItemName(curr_item, txtUpdateItem.Text);
+            FillComboBox();
         }
     }
 }

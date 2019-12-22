@@ -8,9 +8,7 @@ namespace db_lib.stored_proc
     {
         public string Quer_GetAllEmployees { get; } = @"SELECT id, code, name, job, dept 
                                                         FROM employees";
-        public string Quer_GetEmployee { get; } = @"SELECT id, code, name, job, dept 
-                                                    FROM employees 
-                                                    WHERE code = @code";
+        public string Quer_GetEmployee { get; } = @"SELECT id, code, name, job, dept FROM employees WHERE code = @code";
 
 
     }

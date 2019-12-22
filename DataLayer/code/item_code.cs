@@ -43,7 +43,7 @@ namespace DataLayer.code
             using (var cnn = db_connect())
             {
                 cnn.Open();
-                item result = cnn.Query<item>(Items_Quer.Quer_getItemState, new { item_name }).First();
+                item result = cnn.Query<item>(Items_Quer.Quer_getItemState, new {item_name} ).FirstOrDefault();
 
                 if (result is null)
                 {
@@ -59,6 +59,43 @@ namespace DataLayer.code
             }
         }
 
+
+        public item UPdateItemState(item itemname)
+        {
+            using (var cnn = db_connect())
+            {
+                cnn.Open();
+                itemname.is_active = 0;
+                var rows = cnn.Execute(Items_Quer.Quer_UpdateItemState, new {itemname.is_active, itemname.id});
+
+                return itemname;
+            }
+        }
+
+        public item UndoUPdateItemState(item itemname)
+        {
+            using (var cnn = db_connect())
+            {
+                cnn.Open();
+                itemname.is_active = 1;
+                var rows = cnn.Execute(Items_Quer.Quer_UpdateItemState, new { itemname.is_active, itemname.id });
+
+                return itemname;
+            }
+        }
+
+        public item UPdateItemName(item itemname, string newName)
+        {
+            using (var cnn = db_connect())
+            {
+                cnn.Open();
+
+                itemname.name = newName;
+                var rows = cnn.Execute(Items_Quer.Quer_UpdateItemName, new { itemname.name, itemname.id });
+
+                return itemname;
+            }
+        }
     }
 
 

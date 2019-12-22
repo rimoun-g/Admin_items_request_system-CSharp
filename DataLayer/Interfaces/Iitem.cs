@@ -11,5 +11,8 @@ namespace DataLayer.Interfaces
         List<item> GetAllItems();
 
         item GetItem(string item_name);
+
+        item UPdateItemState(item itemname);
+        item UndoUPdateItemState(item itemname);
     }
 }

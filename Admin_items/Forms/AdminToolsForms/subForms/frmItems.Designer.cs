@@ -95,7 +95,7 @@
             // 
             // btnDeleteItem
             // 
-            this.btnDeleteItem.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnDeleteItem.BackColor = System.Drawing.SystemColors.Control;
             this.btnDeleteItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteItem.Location = new System.Drawing.Point(659, 138);
             this.btnDeleteItem.Name = "btnDeleteItem";
@@ -103,10 +103,11 @@
             this.btnDeleteItem.TabIndex = 5;
             this.btnDeleteItem.Text = "Delete Selected Item";
             this.btnDeleteItem.UseVisualStyleBackColor = false;
+            this.btnDeleteItem.Click += new System.EventHandler(this.btnDeleteItem_Click);
             // 
             // btnUndeleteItem
             // 
-            this.btnUndeleteItem.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnUndeleteItem.BackColor = System.Drawing.SystemColors.Control;
             this.btnUndeleteItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUndeleteItem.Location = new System.Drawing.Point(659, 194);
             this.btnUndeleteItem.Name = "btnUndeleteItem";
@@ -114,6 +115,7 @@
             this.btnUndeleteItem.TabIndex = 6;
             this.btnUndeleteItem.Text = "Undo deleted Item";
             this.btnUndeleteItem.UseVisualStyleBackColor = false;
+            this.btnUndeleteItem.Click += new System.EventHandler(this.btnUndeleteItem_Click);
             // 
             // btnUpdateItem
             // 
@@ -125,6 +127,7 @@
             this.btnUpdateItem.TabIndex = 9;
             this.btnUpdateItem.Text = "Update Selected Item";
             this.btnUpdateItem.UseVisualStyleBackColor = false;
+            this.btnUpdateItem.Click += new System.EventHandler(this.btnUpdateItem_Click);
             // 
             // txtUpdateItem
             // 
