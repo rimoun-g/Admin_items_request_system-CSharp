@@ -59,6 +59,7 @@
             this.cmbxItems.Name = "cmbxItems";
             this.cmbxItems.Size = new System.Drawing.Size(508, 28);
             this.cmbxItems.TabIndex = 1;
+            this.cmbxItems.SelectedIndexChanged += new System.EventHandler(this.cmbxItems_SelectedIndexChanged);
             // 
             // lblAddUpdateSubCat
             // 
@@ -86,6 +87,7 @@
             this.cmbxSubCats.Name = "cmbxSubCats";
             this.cmbxSubCats.Size = new System.Drawing.Size(508, 28);
             this.cmbxSubCats.TabIndex = 4;
+            this.cmbxSubCats.SelectedIndexChanged += new System.EventHandler(this.cmbxSubCats_SelectedIndexChanged);
             // 
             // lblItemSubCat
             // 
@@ -106,6 +108,7 @@
             this.btnAddSubCat.TabIndex = 6;
             this.btnAddSubCat.Text = "Add Sub. Category";
             this.btnAddSubCat.UseVisualStyleBackColor = false;
+            this.btnAddSubCat.Click += new System.EventHandler(this.btnAddSubCat_Click);
             // 
             // btnUpdateSubCat
             // 
@@ -117,6 +120,7 @@
             this.btnUpdateSubCat.TabIndex = 7;
             this.btnUpdateSubCat.Text = "Update Sub. Category";
             this.btnUpdateSubCat.UseVisualStyleBackColor = false;
+            this.btnUpdateSubCat.Click += new System.EventHandler(this.btnUpdateSubCat_Click);
             // 
             // btnDeleteSubCat
             // 
@@ -128,6 +132,7 @@
             this.btnDeleteSubCat.TabIndex = 8;
             this.btnDeleteSubCat.Text = "Delete Sub. Category";
             this.btnDeleteSubCat.UseVisualStyleBackColor = false;
+            this.btnDeleteSubCat.Click += new System.EventHandler(this.btnDeleteSubCat_Click);
             // 
             // btnUndeleteSubCat
             // 
@@ -139,6 +144,7 @@
             this.btnUndeleteSubCat.TabIndex = 9;
             this.btnUndeleteSubCat.Text = "Undo Delete Sub. Category";
             this.btnUndeleteSubCat.UseVisualStyleBackColor = false;
+            this.btnUndeleteSubCat.Click += new System.EventHandler(this.btnUndeleteSubCat_Click);
             // 
             // frmSubcat
             // 

@@ -74,10 +74,6 @@
             this.cmbxDeleteItem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbxDeleteItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbxDeleteItem.FormattingEnabled = true;
-            this.cmbxDeleteItem.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C"});
             this.cmbxDeleteItem.Location = new System.Drawing.Point(132, 145);
             this.cmbxDeleteItem.Name = "cmbxDeleteItem";
             this.cmbxDeleteItem.Size = new System.Drawing.Size(493, 28);
@@ -167,7 +163,7 @@
             this.MaximizeBox = false;
             this.Name = "frmItems";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmItems";
+            this.Text = "Items Management";
             this.Load += new System.EventHandler(this.frmItems_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

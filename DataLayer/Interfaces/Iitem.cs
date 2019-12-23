@@ -13,6 +13,5 @@ namespace DataLayer.Interfaces
         item GetItem(string item_name);
 
         item UPdateItemState(item itemname);
-        item UndoUPdateItemState(item itemname);
     }
 }

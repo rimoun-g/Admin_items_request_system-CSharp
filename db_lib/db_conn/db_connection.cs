@@ -38,14 +38,37 @@ namespace db_lib.db_conn
             using (var cnn = db_connect())
             {
                 cnn.Open();
+                
+                //employees table
                 cnn.Execute(
-                    
+
                 @"CREATE TABLE employees (
                 id    INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
                 code  INTEGER NOT NULL UNIQUE,
                 name  TEXT NOT NULL,
                 job   TEXT NOT NULL,
-                dept  TEXT NOT NULL);");
+                dept  TEXT NOT NULL,
+                section  TEXT);");
+
+                //items table
+                cnn.Execute(@"CREATE TABLE items(
+                            id    INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+                            name  TEXT NOT NULL,
+                            is_active INTEGER NOT NULL);");
+
+                //subcats table
+                cnn.Execute(@"CREATE TABLE subcats (
+                            id    INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+                            item_id   INTEGER NOT NULL,
+                            name  TEXT NOT NULL,
+                            is_active INTEGER NOT NULL);");
+
+
+                    
+                    
+     
+
+
             }
         }
 

@@ -13,7 +13,7 @@ namespace Admin_items.AppLayer
     {
         item_code item_Code = new item_code();
 
-        public List<item> items = new List<item>();
+        
         public List<string> items_names = new List<string>();
 
          
@@ -48,7 +48,7 @@ namespace Admin_items.AppLayer
         {
             var all_items_names = new List<string>();
 
-            items = GetllALLITEMS();
+            var items = GetllALLITEMS();
 
             if (items.Count() > 0)
             {
@@ -73,6 +73,7 @@ namespace Admin_items.AppLayer
 
         public item item_by_name(string item_name)
         {
+            var items = GetllALLITEMS();
 
             if (items.Count > 0)
             {
@@ -81,9 +82,8 @@ namespace Admin_items.AppLayer
                     if (_value.name == item_name)
                     {
                         return _value;
-
                     }
-                }
+                } 
             }
             else
             {
@@ -102,7 +102,7 @@ namespace Admin_items.AppLayer
 
         public void UndoUpdateItem(item item)
         {
-            item_Code.UndoUPdateItemState(item);
+            item_Code.UPdateItemState(item);
             MessageBox.Show("The item has been restored.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

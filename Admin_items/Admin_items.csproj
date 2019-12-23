@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppLayer\Items.cs" />
+    <Compile Include="AppLayer\SubCats.cs" />
     <Compile Include="Forms\AdminToolsForms\AdministratorTools.cs">
       <SubType>Form</SubType>
     </Compile>

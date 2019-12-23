@@ -65,24 +65,21 @@ namespace DataLayer.code
             using (var cnn = db_connect())
             {
                 cnn.Open();
-                itemname.is_active = 0;
+                if (itemname.is_active == 0)
+                {
+                    itemname.is_active = 1;
+                }
+                else
+                {
+                    itemname.is_active = 0;
+                }
+                
                 var rows = cnn.Execute(Items_Quer.Quer_UpdateItemState, new {itemname.is_active, itemname.id});
 
                 return itemname;
             }
         }
 
-        public item UndoUPdateItemState(item itemname)
-        {
-            using (var cnn = db_connect())
-            {
-                cnn.Open();
-                itemname.is_active = 1;
-                var rows = cnn.Execute(Items_Quer.Quer_UpdateItemState, new { itemname.is_active, itemname.id });
-
-                return itemname;
-            }
-        }
 
         public item UPdateItemName(item itemname, string newName)
         {
@@ -90,7 +87,7 @@ namespace DataLayer.code
             {
                 cnn.Open();
 
-                itemname.name = newName;
+                itemname.name = newName.ToLower();
                 var rows = cnn.Execute(Items_Quer.Quer_UpdateItemName, new { itemname.name, itemname.id });
 
                 return itemname;
