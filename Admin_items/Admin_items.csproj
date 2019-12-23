@@ -42,6 +42,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppLayer\DataEntry.cs" />
+    <Compile Include="AppLayer\Employees.cs" />
     <Compile Include="AppLayer\Items.cs" />
     <Compile Include="AppLayer\SubCats.cs" />
     <Compile Include="Forms\AdminToolsForms\AdministratorTools.cs">
@@ -67,6 +69,12 @@
     </Compile>
     <Compile Include="Forms\AdminToolsForms\subForms\frmUsers.Designer.cs">
       <DependentUpon>frmUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DataEntryForm\frmDataEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DataEntryForm\frmDataEntry.Designer.cs">
+      <DependentUpon>frmDataEntry.cs</DependentUpon>
     </Compile>
     <Compile Include="main.cs" />
     <Compile Include="test.cs">
@@ -101,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminToolsForms\subForms\frmUsers.resx">
       <DependentUpon>frmUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DataEntryForm\frmDataEntry.resx">
+      <DependentUpon>frmDataEntry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="test.resx">
       <DependentUpon>test.cs</DependentUpon>

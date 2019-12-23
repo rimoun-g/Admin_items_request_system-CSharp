@@ -21,10 +21,7 @@ namespace DataLayer.code
             using (var cnn = db_connect())
             {
                 cnn.Open();
-                employee result = cnn.Query<employee>(
-                    @"SELECT id, code, name, job, dept
-                    FROM employees
-                    WHERE code = @code", new { code }).FirstOrDefault();
+                employee result = cnn.Query<employee>(employees_Quer.Quer_GetEmployee, new { code }).FirstOrDefault();
                 return result;
             }
 

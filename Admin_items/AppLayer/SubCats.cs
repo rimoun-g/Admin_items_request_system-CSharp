@@ -12,8 +12,6 @@ namespace Admin_items.AppLayer
     public class SubCats
     {
         public subcat_code subcat_Code = new subcat_code();
-
-
         public Items app_items = new Items();
 
         public List<subcat> GetALLSubCats()

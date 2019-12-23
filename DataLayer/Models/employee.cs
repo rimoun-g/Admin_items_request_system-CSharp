@@ -11,5 +11,6 @@ namespace DataLayer.Models
         public string name { get; set; }
         public string job { get; set; }
         public string dept { get; set; }
+        public string section { get; set; }
     }
 }
