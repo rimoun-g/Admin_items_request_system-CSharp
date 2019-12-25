@@ -46,6 +46,7 @@
     <Compile Include="AppLayer\Employees.cs" />
     <Compile Include="AppLayer\Items.cs" />
     <Compile Include="AppLayer\SubCats.cs" />
+    <Compile Include="AppLayer\Users.cs" />
     <Compile Include="Forms\AdminToolsForms\frmAdministratorTools.cs">
       <SubType>Form</SubType>
     </Compile>

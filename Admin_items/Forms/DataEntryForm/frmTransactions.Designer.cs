@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grpbxEntryTools = new System.Windows.Forms.GroupBox();
             this.btnAddTransaction = new System.Windows.Forms.Button();
             this.cmbxSubCats = new System.Windows.Forms.ComboBox();
@@ -73,12 +73,14 @@
             // 
             // btnAddTransaction
             // 
+            this.btnAddTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnAddTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddTransaction.Location = new System.Drawing.Point(463, 273);
             this.btnAddTransaction.Name = "btnAddTransaction";
             this.btnAddTransaction.Size = new System.Drawing.Size(289, 45);
             this.btnAddTransaction.TabIndex = 6;
             this.btnAddTransaction.Text = "Add Transaction";
-            this.btnAddTransaction.UseVisualStyleBackColor = true;
+            this.btnAddTransaction.UseVisualStyleBackColor = false;
             this.btnAddTransaction.Click += new System.EventHandler(this.btnAddTransaction_Click);
             // 
             // cmbxSubCats
@@ -183,9 +185,9 @@
             this.lblValue.AutoSize = true;
             this.lblValue.Location = new System.Drawing.Point(19, 238);
             this.lblValue.Name = "lblValue";
-            this.lblValue.Size = new System.Drawing.Size(48, 21);
+            this.lblValue.Size = new System.Drawing.Size(77, 21);
             this.lblValue.TabIndex = 2;
-            this.lblValue.Text = "Value";
+            this.lblValue.Text = "Unit Price";
             // 
             // lblSubCats
             // 
@@ -218,8 +220,8 @@
             // 
             // dgEmployeeRecord
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgEmployeeRecord.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgEmployeeRecord.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgEmployeeRecord.BackgroundColor = System.Drawing.Color.White;
             this.dgEmployeeRecord.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgEmployeeRecord.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;

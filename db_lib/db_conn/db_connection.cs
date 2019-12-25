@@ -63,10 +63,18 @@ namespace db_lib.db_conn
                             name  TEXT NOT NULL,
                             is_active INTEGER NOT NULL);");
 
+                //transactions table
+                cnn.Execute(@"CREATE TABLE transactions (
+                            id    INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+                            emp_no    INTEGER NOT NULL,
+                            item_id   INTEGER NOT NULL,
+                            subcat_id INTEGER,
+                            value NUMERIC NOT NULL,
+                            quantity  NUMERIC NOT NULL,
+                            user_id   INTEGER,
+                            Date  TEXT NOT NULL
+                        ); ");
 
-                    
-                    
-     
 
 
             }

@@ -103,8 +103,16 @@ namespace Admin_items.Forms.DataEntry
 
         private void btnAddTransaction_Click(object sender, EventArgs e)
         {
-      
+            if (current_choice is null)
+            {
+                MessageBox.Show("There are some missing information make sure you selected the items and subcategories as well as employee number","User Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            else
+            {
                 data.AddTransaction(txtEmpNumber.Text, current_choice.item_id, current_choice.id, txtValue.Value, txtQuantity.Value, user_id);
+            }
+      
+                
 
         }
     }
