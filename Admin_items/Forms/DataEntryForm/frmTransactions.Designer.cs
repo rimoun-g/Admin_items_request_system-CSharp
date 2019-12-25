@@ -1,6 +1,6 @@
 ﻿namespace Admin_items.Forms.DataEntry
 {
-    partial class frmDataEntry
+    partial class frmTransactions
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grpbxEntryTools = new System.Windows.Forms.GroupBox();
+            this.btnAddTransaction = new System.Windows.Forms.Button();
             this.cmbxSubCats = new System.Windows.Forms.ComboBox();
             this.cmbxItems = new System.Windows.Forms.ComboBox();
             this.txtValue = new System.Windows.Forms.NumericUpDown();
@@ -41,12 +43,6 @@
             this.lblItems = new System.Windows.Forms.Label();
             this.grpbxEmployeeRecord = new System.Windows.Forms.GroupBox();
             this.dgEmployeeRecord = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.item = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sub_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblEmployeeInfo = new System.Windows.Forms.Label();
             this.grpbxEntryTools.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtValue)).BeginInit();
@@ -57,6 +53,7 @@
             // 
             // grpbxEntryTools
             // 
+            this.grpbxEntryTools.Controls.Add(this.btnAddTransaction);
             this.grpbxEntryTools.Controls.Add(this.cmbxSubCats);
             this.grpbxEntryTools.Controls.Add(this.cmbxItems);
             this.grpbxEntryTools.Controls.Add(this.txtValue);
@@ -74,6 +71,16 @@
             this.grpbxEntryTools.TabStop = false;
             this.grpbxEntryTools.Text = "Entry Tools";
             // 
+            // btnAddTransaction
+            // 
+            this.btnAddTransaction.Location = new System.Drawing.Point(463, 273);
+            this.btnAddTransaction.Name = "btnAddTransaction";
+            this.btnAddTransaction.Size = new System.Drawing.Size(289, 45);
+            this.btnAddTransaction.TabIndex = 6;
+            this.btnAddTransaction.Text = "Add Transaction";
+            this.btnAddTransaction.UseVisualStyleBackColor = true;
+            this.btnAddTransaction.Click += new System.EventHandler(this.btnAddTransaction_Click);
+            // 
             // cmbxSubCats
             // 
             this.cmbxSubCats.BackColor = System.Drawing.SystemColors.Control;
@@ -83,6 +90,7 @@
             this.cmbxSubCats.Name = "cmbxSubCats";
             this.cmbxSubCats.Size = new System.Drawing.Size(483, 28);
             this.cmbxSubCats.TabIndex = 3;
+            this.cmbxSubCats.SelectedIndexChanged += new System.EventHandler(this.cmbxSubCats_SelectedIndexChanged);
             // 
             // cmbxItems
             // 
@@ -106,12 +114,7 @@
             0});
             this.txtValue.Location = new System.Drawing.Point(129, 236);
             this.txtValue.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.txtValue.Minimum = new decimal(new int[] {
-            1,
+            100000,
             0,
             0,
             0});
@@ -215,14 +218,10 @@
             // 
             // dgEmployeeRecord
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgEmployeeRecord.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgEmployeeRecord.BackgroundColor = System.Drawing.Color.White;
             this.dgEmployeeRecord.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgEmployeeRecord.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.item,
-            this.sub_item,
-            this.value,
-            this.quantity,
-            this.date});
             this.dgEmployeeRecord.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgEmployeeRecord.Location = new System.Drawing.Point(19, 80);
             this.dgEmployeeRecord.Name = "dgEmployeeRecord";
@@ -231,60 +230,6 @@
             this.dgEmployeeRecord.RowTemplate.Height = 24;
             this.dgEmployeeRecord.Size = new System.Drawing.Size(780, 300);
             this.dgEmployeeRecord.TabIndex = 1;
-            // 
-            // id
-            // 
-            this.id.Frozen = true;
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 110;
-            // 
-            // item
-            // 
-            this.item.Frozen = true;
-            this.item.HeaderText = "item";
-            this.item.MinimumWidth = 6;
-            this.item.Name = "item";
-            this.item.ReadOnly = true;
-            this.item.Width = 110;
-            // 
-            // sub_item
-            // 
-            this.sub_item.Frozen = true;
-            this.sub_item.HeaderText = "Sub Item";
-            this.sub_item.MinimumWidth = 6;
-            this.sub_item.Name = "sub_item";
-            this.sub_item.ReadOnly = true;
-            this.sub_item.Width = 110;
-            // 
-            // value
-            // 
-            this.value.Frozen = true;
-            this.value.HeaderText = "Value";
-            this.value.MinimumWidth = 6;
-            this.value.Name = "value";
-            this.value.ReadOnly = true;
-            this.value.Width = 110;
-            // 
-            // quantity
-            // 
-            this.quantity.Frozen = true;
-            this.quantity.HeaderText = "Quantity";
-            this.quantity.MinimumWidth = 6;
-            this.quantity.Name = "quantity";
-            this.quantity.ReadOnly = true;
-            this.quantity.Width = 110;
-            // 
-            // date
-            // 
-            this.date.Frozen = true;
-            this.date.HeaderText = "Date";
-            this.date.MinimumWidth = 6;
-            this.date.Name = "date";
-            this.date.ReadOnly = true;
-            this.date.Width = 110;
             // 
             // lblEmployeeInfo
             // 
@@ -295,7 +240,7 @@
             this.lblEmployeeInfo.TabIndex = 0;
             this.lblEmployeeInfo.Text = "Employee Info:";
             // 
-            // frmDataEntry
+            // frmTransactions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -307,7 +252,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
-            this.Name = "frmDataEntry";
+            this.Name = "frmTransactions";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Data Entry";
             this.grpbxEntryTools.ResumeLayout(false);
             this.grpbxEntryTools.PerformLayout();
@@ -335,12 +281,7 @@
         private System.Windows.Forms.ComboBox cmbxSubCats;
         private System.Windows.Forms.ComboBox cmbxItems;
         private System.Windows.Forms.DataGridView dgEmployeeRecord;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn item;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sub_item;
-        private System.Windows.Forms.DataGridViewTextBoxColumn value;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn date;
         private System.Windows.Forms.Label lblEmployeeInfo;
+        private System.Windows.Forms.Button btnAddTransaction;
     }
 }

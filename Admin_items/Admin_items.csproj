@@ -42,15 +42,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppLayer\DataEntry.cs" />
+    <Compile Include="AppLayer\Transactions.cs" />
     <Compile Include="AppLayer\Employees.cs" />
     <Compile Include="AppLayer\Items.cs" />
     <Compile Include="AppLayer\SubCats.cs" />
-    <Compile Include="Forms\AdminToolsForms\AdministratorTools.cs">
+    <Compile Include="Forms\AdminToolsForms\frmAdministratorTools.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminToolsForms\AdministratorTools.Designer.cs">
-      <DependentUpon>AdministratorTools.cs</DependentUpon>
+    <Compile Include="Forms\AdminToolsForms\frmAdministratorTools.Designer.cs">
+      <DependentUpon>frmAdministratorTools.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminToolsForms\subForms\frmItems.cs">
       <SubType>Form</SubType>
@@ -70,11 +70,17 @@
     <Compile Include="Forms\AdminToolsForms\subForms\frmUsers.Designer.cs">
       <DependentUpon>frmUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\DataEntryForm\frmDataEntry.cs">
+    <Compile Include="Forms\DataEntryForm\frmTransactions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\DataEntryForm\frmDataEntry.Designer.cs">
-      <DependentUpon>frmDataEntry.cs</DependentUpon>
+    <Compile Include="Forms\DataEntryForm\frmTransactions.Designer.cs">
+      <DependentUpon>frmTransactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMainPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMainPanel.Designer.cs">
+      <DependentUpon>frmMainPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="main.cs" />
     <Compile Include="test.cs">
@@ -98,8 +104,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\AdminToolsForms\AdministratorTools.resx">
-      <DependentUpon>AdministratorTools.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AdminToolsForms\frmAdministratorTools.resx">
+      <DependentUpon>frmAdministratorTools.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminToolsForms\subForms\frmItems.resx">
       <DependentUpon>frmItems.cs</DependentUpon>
@@ -110,8 +116,11 @@
     <EmbeddedResource Include="Forms\AdminToolsForms\subForms\frmUsers.resx">
       <DependentUpon>frmUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DataEntryForm\frmDataEntry.resx">
-      <DependentUpon>frmDataEntry.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\DataEntryForm\frmTransactions.resx">
+      <DependentUpon>frmTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMainPanel.resx">
+      <DependentUpon>frmMainPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="test.resx">
       <DependentUpon>test.cs</DependentUpon>

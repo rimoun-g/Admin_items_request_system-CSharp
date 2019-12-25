@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Admin_items.Forms.AdminToolsForms.subForms;
 using Admin_items.Forms.DataEntry;
+using Admin_items.Forms;
 namespace Admin_items
 {
     static class main
@@ -13,7 +14,7 @@ namespace Admin_items
         [STAThread]
         static void Main()
         {
-            Application.Run(new frmDataEntry());
+            Application.Run(new frmMainPanel());
         }
     }
 }
