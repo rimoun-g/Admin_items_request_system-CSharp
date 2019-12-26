@@ -30,5 +30,10 @@ namespace Admin_items.Forms
             frmAdministratorTools frmAdministratorTools = new frmAdministratorTools();
             frmAdministratorTools.ShowDialog();
         }
+
+        private void frmMainPanel_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

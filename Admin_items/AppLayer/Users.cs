@@ -59,5 +59,17 @@ namespace Admin_items.AppLayer
             return false;
 
         }
+
+        public user Get_User_By_Name(string username)
+        {
+            var usr = user_Code.GetUserByName(username);
+
+            return usr;
+        }
+
+        public string pw_hasing(string pw)
+        {
+           return user_Code.sha256(pw);
+        }
     }
 }

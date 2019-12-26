@@ -84,6 +84,7 @@
             this.Name = "frmMainPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Panel";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMainPanel_FormClosing);
             this.ResumeLayout(false);
 
         }

@@ -7,6 +7,8 @@ using System.Windows.Forms;
 using Admin_items.Forms.AdminToolsForms.subForms;
 using Admin_items.Forms.DataEntry;
 using Admin_items.Forms;
+using Admin_items.Forms.Login;
+
 namespace Admin_items
 {
     static class main
@@ -14,7 +16,7 @@ namespace Admin_items
         [STAThread]
         static void Main()
         {
-            Application.Run(new frmUsers());
+            Application.Run(new frmLogin());
         }
     }
 }

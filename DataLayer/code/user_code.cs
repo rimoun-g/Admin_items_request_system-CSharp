@@ -45,7 +45,7 @@ namespace DataLayer.code
             }
         }
 
-        static string sha256(string randomString)
+        public string sha256(string randomString)
         {
             var crypt = new SHA256Managed();
             string hash = String.Empty;
@@ -57,5 +57,16 @@ namespace DataLayer.code
             return hash;
         }
 
+
+        public user GetUserByName(string user_name)
+        {
+            using (var cnn = db_connect())
+            {
+                cnn.Open();
+                user result = cnn.Query<user>(users_Quer.Quer_GetUserByName, new { user_name }).FirstOrDefault();
+
+                return result;
+            }
+        }
     }
 }
