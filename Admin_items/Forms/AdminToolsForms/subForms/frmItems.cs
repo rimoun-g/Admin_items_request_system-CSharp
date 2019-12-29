@@ -22,7 +22,7 @@ namespace Admin_items.Forms.AdminToolsForms.subForms
 
         private void btnAddItem_Click(object sender, EventArgs e)
         {
-            items.add_item(txtAddItem.Text);
+            items.add_item(txtAddItem.Text.ToLower());
             FillComboBox();
         }
 
@@ -45,7 +45,7 @@ namespace Admin_items.Forms.AdminToolsForms.subForms
             if (cmbxDeleteItem.Text != "")
             {
 
-                item curr_item = items.item_by_name(cmbxDeleteItem.Text);
+                item curr_item = items.item_by_name(cmbxDeleteItem.Text.ToLower());
 
                 if (curr_item.is_active == 1)
                 {
@@ -65,7 +65,7 @@ namespace Admin_items.Forms.AdminToolsForms.subForms
 
         private void btnDeleteItem_Click(object sender, EventArgs e)
         {
-            item curr_item = items.item_by_name(cmbxDeleteItem.Text);
+            item curr_item = items.item_by_name(cmbxDeleteItem.Text.ToLower());
             items.UpdateItem(curr_item);
             FillComboBox();
             
@@ -73,7 +73,7 @@ namespace Admin_items.Forms.AdminToolsForms.subForms
 
         private void btnUndeleteItem_Click(object sender, EventArgs e)
         {
-            item curr_item = items.item_by_name(cmbxDeleteItem.Text);
+            item curr_item = items.item_by_name(cmbxDeleteItem.Text.ToLower());
             items.UndoUpdateItem(curr_item);
             FillComboBox();
             
@@ -81,8 +81,8 @@ namespace Admin_items.Forms.AdminToolsForms.subForms
 
         private void btnUpdateItem_Click(object sender, EventArgs e)
         {
-            item curr_item = items.item_by_name(cmbxDeleteItem.Text);
-            items.UpdateItemName(curr_item, txtUpdateItem.Text);
+            item curr_item = items.item_by_name(cmbxDeleteItem.Text.ToLower());
+            items.UpdateItemName(curr_item, txtUpdateItem.Text.ToLower());
             FillComboBox();
         }
     }

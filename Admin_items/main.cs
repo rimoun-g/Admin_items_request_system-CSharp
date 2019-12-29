@@ -16,7 +16,7 @@ namespace Admin_items
         [STAThread]
         static void Main()
         {
-            Application.Run(new frmTransactions());
+            Application.Run(new frmItems());
         }
     }
 }

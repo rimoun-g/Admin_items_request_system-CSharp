@@ -21,12 +21,13 @@ namespace Admin_items.AppLayer
         public void add_item(string item_name)
         {
 
-            bool chk_dup = items_names.Contains(item_name);
+            var items = Items_Names();
+            bool chk_dup = items.Contains(item_name.ToLower());
 
-            if (!string.IsNullOrEmpty(item_name.Trim()) & chk_dup==false)
+            if (!string.IsNullOrEmpty(item_name.Trim()) & !chk_dup)
             {
                 item _item = new item();
-                _item.name = item_name.Trim();
+                _item.name = item_name.Trim().ToLower();
                 _item.is_active = 1;
                 item_Code.AddItem(_item);
 
@@ -79,7 +80,7 @@ namespace Admin_items.AppLayer
             {
                 foreach (item _value in items)
                 {
-                    if (_value.name == item_name)
+                    if (_value.name == item_name.ToLower())
                     {
                         return _value;
                     }
@@ -111,11 +112,11 @@ namespace Admin_items.AppLayer
             var names = Items_Names();
             bool chk_item = names.Contains(item.name);
 
-            bool chk_dup = names.Contains(newName);
+            bool chk_dup = names.Contains(newName.ToLower());
 
             if ((chk_dup == false) & (chk_item == true) & (!string.IsNullOrEmpty(newName.Trim())))
             {
-                item_Code.UPdateItemName(item, newName.Trim());
+                item_Code.UPdateItemName(item, newName.Trim().ToLower());
                 MessageBox.Show("The item has been updated.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
