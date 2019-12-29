@@ -11,7 +11,7 @@ namespace db_lib.db_conn
         private string db_file_name = "My_admin_db.db";
         public string Db_file_name
         {
-            get { return AppDomain.CurrentDomain.BaseDirectory + db_file_name; }
+            get { return  db_file_name; }
         }
 
 
@@ -69,10 +69,12 @@ namespace db_lib.db_conn
                             emp_no    INTEGER NOT NULL,
                             item_id   INTEGER NOT NULL,
                             subcat_id INTEGER,
-                            value NUMERIC NOT NULL,
+                            unit_price NUMERIC NOT NULL,
                             quantity  NUMERIC NOT NULL,
                             user_id   INTEGER,
-                            Date  TEXT NOT NULL
+                            date  TEXT NOT NULL
+                            delivery_date  TEXT NOT NULL
+                            remarks  TEXT
                         ); ");
 
 

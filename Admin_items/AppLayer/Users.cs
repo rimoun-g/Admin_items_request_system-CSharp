@@ -14,6 +14,7 @@ namespace Admin_items.AppLayer
     {
         user_code user_Code = new user_code();
 
+       
         public void Add_New_User(string user_name, string pw, string repw , string lv)
         {
             int.TryParse(lv, out int level);
@@ -30,22 +31,18 @@ namespace Admin_items.AppLayer
                 {
                     MessageBox.Show("This username is already taken, please try another one","Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
-
             }
             else
             {
                 MessageBox.Show("Please check the password & level fields again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
         public List<user> Get_All_Users()
         {
             var users = user_Code.GetAllUsers();
 
             return users;
         }
-
         public bool check_username_exists(string username)
         {
             var usrs = Get_All_Users();
@@ -57,7 +54,6 @@ namespace Admin_items.AppLayer
                 }
             }
             return false;
-
         }
 
         public user Get_User_By_Name(string username)
@@ -66,7 +62,6 @@ namespace Admin_items.AppLayer
 
             return usr;
         }
-
         public string pw_hasing(string pw)
         {
            return user_Code.sha256(pw);

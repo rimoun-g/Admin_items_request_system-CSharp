@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grpbxEntryTools = new System.Windows.Forms.GroupBox();
             this.btnAddTransaction = new System.Windows.Forms.Button();
             this.cmbxSubCats = new System.Windows.Forms.ComboBox();
@@ -44,6 +44,10 @@
             this.grpbxEmployeeRecord = new System.Windows.Forms.GroupBox();
             this.dgEmployeeRecord = new System.Windows.Forms.DataGridView();
             this.lblEmployeeInfo = new System.Windows.Forms.Label();
+            this.lblDeliveryDate = new System.Windows.Forms.Label();
+            this.dtpkrDeliveryDate = new System.Windows.Forms.DateTimePicker();
+            this.lblRemarks = new System.Windows.Forms.Label();
+            this.txtRemarks = new System.Windows.Forms.TextBox();
             this.grpbxEntryTools.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantity)).BeginInit();
@@ -53,6 +57,10 @@
             // 
             // grpbxEntryTools
             // 
+            this.grpbxEntryTools.Controls.Add(this.txtRemarks);
+            this.grpbxEntryTools.Controls.Add(this.lblRemarks);
+            this.grpbxEntryTools.Controls.Add(this.dtpkrDeliveryDate);
+            this.grpbxEntryTools.Controls.Add(this.lblDeliveryDate);
             this.grpbxEntryTools.Controls.Add(this.btnAddTransaction);
             this.grpbxEntryTools.Controls.Add(this.cmbxSubCats);
             this.grpbxEntryTools.Controls.Add(this.cmbxItems);
@@ -66,7 +74,7 @@
             this.grpbxEntryTools.Controls.Add(this.lblItems);
             this.grpbxEntryTools.Location = new System.Drawing.Point(12, 25);
             this.grpbxEntryTools.Name = "grpbxEntryTools";
-            this.grpbxEntryTools.Size = new System.Drawing.Size(810, 372);
+            this.grpbxEntryTools.Size = new System.Drawing.Size(810, 415);
             this.grpbxEntryTools.TabIndex = 0;
             this.grpbxEntryTools.TabStop = false;
             this.grpbxEntryTools.Text = "Entry Tools";
@@ -75,7 +83,7 @@
             // 
             this.btnAddTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnAddTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddTransaction.Location = new System.Drawing.Point(463, 273);
+            this.btnAddTransaction.Location = new System.Drawing.Point(498, 333);
             this.btnAddTransaction.Name = "btnAddTransaction";
             this.btnAddTransaction.Size = new System.Drawing.Size(289, 45);
             this.btnAddTransaction.TabIndex = 6;
@@ -88,7 +96,7 @@
             this.cmbxSubCats.BackColor = System.Drawing.SystemColors.Control;
             this.cmbxSubCats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbxSubCats.FormattingEnabled = true;
-            this.cmbxSubCats.Location = new System.Drawing.Point(129, 181);
+            this.cmbxSubCats.Location = new System.Drawing.Point(140, 181);
             this.cmbxSubCats.Name = "cmbxSubCats";
             this.cmbxSubCats.Size = new System.Drawing.Size(483, 28);
             this.cmbxSubCats.TabIndex = 3;
@@ -99,7 +107,7 @@
             this.cmbxItems.BackColor = System.Drawing.SystemColors.Control;
             this.cmbxItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbxItems.FormattingEnabled = true;
-            this.cmbxItems.Location = new System.Drawing.Point(129, 127);
+            this.cmbxItems.Location = new System.Drawing.Point(140, 127);
             this.cmbxItems.Name = "cmbxItems";
             this.cmbxItems.Size = new System.Drawing.Size(483, 28);
             this.cmbxItems.TabIndex = 2;
@@ -114,7 +122,7 @@
             0,
             0,
             0});
-            this.txtValue.Location = new System.Drawing.Point(129, 236);
+            this.txtValue.Location = new System.Drawing.Point(140, 236);
             this.txtValue.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -142,7 +150,7 @@
             // txtQuantity
             // 
             this.txtQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtQuantity.Location = new System.Drawing.Point(129, 291);
+            this.txtQuantity.Location = new System.Drawing.Point(140, 291);
             this.txtQuantity.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -211,36 +219,71 @@
             // 
             this.grpbxEmployeeRecord.Controls.Add(this.dgEmployeeRecord);
             this.grpbxEmployeeRecord.Controls.Add(this.lblEmployeeInfo);
-            this.grpbxEmployeeRecord.Location = new System.Drawing.Point(12, 417);
+            this.grpbxEmployeeRecord.Location = new System.Drawing.Point(12, 446);
             this.grpbxEmployeeRecord.Name = "grpbxEmployeeRecord";
-            this.grpbxEmployeeRecord.Size = new System.Drawing.Size(810, 386);
+            this.grpbxEmployeeRecord.Size = new System.Drawing.Size(810, 357);
             this.grpbxEmployeeRecord.TabIndex = 1;
             this.grpbxEmployeeRecord.TabStop = false;
             this.grpbxEmployeeRecord.Text = "Employee Record";
             // 
             // dgEmployeeRecord
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgEmployeeRecord.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgEmployeeRecord.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgEmployeeRecord.BackgroundColor = System.Drawing.Color.White;
             this.dgEmployeeRecord.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgEmployeeRecord.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgEmployeeRecord.Location = new System.Drawing.Point(19, 80);
+            this.dgEmployeeRecord.Location = new System.Drawing.Point(6, 79);
             this.dgEmployeeRecord.Name = "dgEmployeeRecord";
             this.dgEmployeeRecord.ReadOnly = true;
             this.dgEmployeeRecord.RowHeadersWidth = 45;
             this.dgEmployeeRecord.RowTemplate.Height = 24;
-            this.dgEmployeeRecord.Size = new System.Drawing.Size(780, 300);
+            this.dgEmployeeRecord.Size = new System.Drawing.Size(793, 263);
             this.dgEmployeeRecord.TabIndex = 1;
             // 
             // lblEmployeeInfo
             // 
             this.lblEmployeeInfo.AutoSize = true;
-            this.lblEmployeeInfo.Location = new System.Drawing.Point(15, 42);
+            this.lblEmployeeInfo.Location = new System.Drawing.Point(19, 40);
             this.lblEmployeeInfo.Name = "lblEmployeeInfo";
             this.lblEmployeeInfo.Size = new System.Drawing.Size(112, 21);
             this.lblEmployeeInfo.TabIndex = 0;
             this.lblEmployeeInfo.Text = "Employee Info:";
+            // 
+            // lblDeliveryDate
+            // 
+            this.lblDeliveryDate.AutoSize = true;
+            this.lblDeliveryDate.Location = new System.Drawing.Point(13, 345);
+            this.lblDeliveryDate.Name = "lblDeliveryDate";
+            this.lblDeliveryDate.Size = new System.Drawing.Size(103, 21);
+            this.lblDeliveryDate.TabIndex = 7;
+            this.lblDeliveryDate.Text = "Delivery Date";
+            // 
+            // dtpkrDeliveryDate
+            // 
+            this.dtpkrDeliveryDate.CustomFormat = "yyyy/MM/dd";
+            this.dtpkrDeliveryDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpkrDeliveryDate.Location = new System.Drawing.Point(140, 340);
+            this.dtpkrDeliveryDate.Name = "dtpkrDeliveryDate";
+            this.dtpkrDeliveryDate.Size = new System.Drawing.Size(222, 27);
+            this.dtpkrDeliveryDate.TabIndex = 8;
+            this.dtpkrDeliveryDate.Value = new System.DateTime(2019, 12, 29, 10, 21, 18, 0);
+            // 
+            // lblRemarks
+            // 
+            this.lblRemarks.AutoSize = true;
+            this.lblRemarks.Location = new System.Drawing.Point(313, 252);
+            this.lblRemarks.Name = "lblRemarks";
+            this.lblRemarks.Size = new System.Drawing.Size(71, 21);
+            this.lblRemarks.TabIndex = 9;
+            this.lblRemarks.Text = "Remarks";
+            // 
+            // txtRemarks
+            // 
+            this.txtRemarks.Location = new System.Drawing.Point(317, 290);
+            this.txtRemarks.Name = "txtRemarks";
+            this.txtRemarks.Size = new System.Drawing.Size(470, 27);
+            this.txtRemarks.TabIndex = 10;
             // 
             // frmTransactions
             // 
@@ -285,5 +328,9 @@
         private System.Windows.Forms.DataGridView dgEmployeeRecord;
         private System.Windows.Forms.Label lblEmployeeInfo;
         private System.Windows.Forms.Button btnAddTransaction;
+        private System.Windows.Forms.DateTimePicker dtpkrDeliveryDate;
+        private System.Windows.Forms.Label lblDeliveryDate;
+        private System.Windows.Forms.Label lblRemarks;
+        private System.Windows.Forms.TextBox txtRemarks;
     }
 }

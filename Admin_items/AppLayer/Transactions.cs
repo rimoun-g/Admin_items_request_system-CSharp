@@ -131,7 +131,7 @@ namespace Admin_items.AppLayer
             return sub;
         }
 
-        public void AddTransaction(string emp_no, int item_id, int subcat_id, decimal value, decimal quantity, int user_id)
+        public void AddTransaction(string emp_no, int item_id, int subcat_id, decimal unit_price, decimal quantity, int user_id, string delivery_date, string remarks)
         {
             int employee_no;
 
@@ -147,10 +147,12 @@ namespace Admin_items.AppLayer
                     trans.emp_no = employee_no;
                     trans.item_id = item_id;
                     trans.subcat_id = subcat_id;
-                    trans.value = value;
+                    trans.unit_price = unit_price;
                     trans.quantity = quantity;
                     trans.user_id = user_id;
                     trans.date = DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss");
+                    trans.delivery_date = delivery_date;
+                    trans.remarks = remarks;
                     transaction_Code.AddTransaction(trans);
                     System.Windows.Forms.MessageBox.Show("The transactions has been added successfully!", "Done", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
                 }

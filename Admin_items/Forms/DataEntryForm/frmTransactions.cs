@@ -109,7 +109,7 @@ namespace Admin_items.Forms.DataEntry
             }
             else
             {
-                data.AddTransaction(txtEmpNumber.Text, current_choice.item_id, current_choice.id, txtValue.Value, txtQuantity.Value, user_id);
+                data.AddTransaction(txtEmpNumber.Text, current_choice.item_id, current_choice.id, txtValue.Value, txtQuantity.Value, user_id, dtpkrDeliveryDate.Value.ToString("yyyy/MM/dd"), txtRemarks.Text);
             }
       
                 

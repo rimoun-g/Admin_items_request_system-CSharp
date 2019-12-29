@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataLayer.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace Admin_items.AppLayer
     public class Login
     {
         Users users = new Users();
-
+        public user log_user = new user();
         public bool LoggedUser(string username, string pw)
         {
             username = username.ToLower();
@@ -21,6 +22,7 @@ namespace Admin_items.AppLayer
             }
             else if (logged_user.user_name==username & logged_user.password==users.pw_hasing(pw))
             {
+                log_user = logged_user;
                 return true;
             }
             else

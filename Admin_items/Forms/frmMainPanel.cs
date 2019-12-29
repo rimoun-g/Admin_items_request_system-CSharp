@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Admin_items.Forms.AdminToolsForms;
 using Admin_items.Forms.DataEntry;
+using Admin_items.AppLayer;
 
 namespace Admin_items.Forms
 {
     public partial class frmMainPanel : Form
     {
+        AppLayer.Login log_cls = new AppLayer.Login();
         public frmMainPanel()
         {
             InitializeComponent();
@@ -34,6 +36,11 @@ namespace Admin_items.Forms
         private void frmMainPanel_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void frmMainPanel_Load(object sender, EventArgs e)
+        {
+            lblUserName.Text = log_cls.log_user.user_name;
         }
     }
 }

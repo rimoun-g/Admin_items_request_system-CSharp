@@ -31,6 +31,7 @@
             this.btnAddTransactionsForm = new System.Windows.Forms.Button();
             this.btnAdminToolsForm = new System.Windows.Forms.Button();
             this.btnReportsForm = new System.Windows.Forms.Button();
+            this.lblUserName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAddTransactionsForm
@@ -68,12 +69,22 @@
             this.btnReportsForm.Text = "Reports";
             this.btnReportsForm.UseVisualStyleBackColor = false;
             // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Location = new System.Drawing.Point(897, 25);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(81, 21);
+            this.lblUserName.TabIndex = 3;
+            this.lblUserName.Text = "Username";
+            // 
             // frmMainPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1050, 424);
+            this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.btnReportsForm);
             this.Controls.Add(this.btnAdminToolsForm);
             this.Controls.Add(this.btnAddTransactionsForm);
@@ -85,7 +96,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Panel";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMainPanel_FormClosing);
+            this.Load += new System.EventHandler(this.frmMainPanel_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -94,5 +107,6 @@
         private System.Windows.Forms.Button btnAddTransactionsForm;
         private System.Windows.Forms.Button btnAdminToolsForm;
         private System.Windows.Forms.Button btnReportsForm;
+        private System.Windows.Forms.Label lblUserName;
     }
 }

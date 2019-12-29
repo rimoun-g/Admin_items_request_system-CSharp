@@ -18,7 +18,7 @@ namespace DataLayer.code
             using (var cnn = db_connect())
             {
                 cnn.Open();
-                cnn.Execute(trans_Quer.Quer_InsertTransaction, new { trans.emp_no, trans.item_id, trans.subcat_id, trans.value, trans.quantity, trans.user_id, trans.date });
+                cnn.Execute(trans_Quer.Quer_InsertTransaction, new { trans.emp_no, trans.item_id, trans.subcat_id, trans.unit_price, trans.quantity, trans.user_id, trans.date, trans.delivery_date, trans.remarks });
                 return trans;
             }
         }
