@@ -24,6 +24,7 @@ namespace Admin_items.Forms.DataEntry
         {
             InitializeComponent();
             FillItemsComboBox();
+            dtpkrDeliveryDate.Value = DateTime.Today;
         }
 
 
@@ -37,6 +38,12 @@ namespace Admin_items.Forms.DataEntry
 
         private void txtEmpNumber_KeyDown(object sender, KeyEventArgs e)
         {
+
+            Dictionary<int, string> header_dic = new Dictionary<int, string>();
+
+            String[] Header_List = new string[8] { "ID", "Employee Code", "Item", "Subcategory", "Unit Price", "Quantity", "Delivery Date", "Remarks"};
+
+
             if (e.KeyCode == Keys.Enter)
             {
  
@@ -45,6 +52,16 @@ namespace Admin_items.Forms.DataEntry
                 {
                     lblEmployeeInfo.Text = get_employee_info(emp_no);
                     dgEmployeeRecord.DataSource = data.get_emp_transactions(emp_no);
+                    
+                    if (dgEmployeeRecord.Columns.Count == 8)
+                    {
+                        for (int i = 0; i < 8; i++)
+                        {
+                            dgEmployeeRecord.Columns[i].HeaderText = Header_List[i];
+                        }
+                    }
+
+
                 }
                 
             }

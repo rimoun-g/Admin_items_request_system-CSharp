@@ -38,7 +38,7 @@
             this.cmbxEmpJob = new System.Windows.Forms.ComboBox();
             this.cmbxDepartment = new System.Windows.Forms.ComboBox();
             this.cmbxSection = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAddEmployee = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmpNum)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,18 +151,19 @@
             this.cmbxSection.Size = new System.Drawing.Size(521, 28);
             this.cmbxSection.TabIndex = 9;
             // 
-            // button1
+            // btnAddEmployee
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(220, 330);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(316, 47);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Add Employee";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAddEmployee.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddEmployee.Font = new System.Drawing.Font("Segoe UI", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnAddEmployee.Location = new System.Drawing.Point(220, 330);
+            this.btnAddEmployee.Name = "btnAddEmployee";
+            this.btnAddEmployee.Size = new System.Drawing.Size(316, 47);
+            this.btnAddEmployee.TabIndex = 10;
+            this.btnAddEmployee.Text = "Add Employee";
+            this.btnAddEmployee.UseVisualStyleBackColor = false;
+            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
             // 
             // frmEmployees
             // 
@@ -170,7 +171,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(758, 398);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAddEmployee);
             this.Controls.Add(this.cmbxSection);
             this.Controls.Add(this.cmbxDepartment);
             this.Controls.Add(this.cmbxEmpJob);
@@ -206,6 +207,6 @@
         private System.Windows.Forms.ComboBox cmbxEmpJob;
         private System.Windows.Forms.ComboBox cmbxDepartment;
         private System.Windows.Forms.ComboBox cmbxSection;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAddEmployee;
     }
 }

@@ -17,14 +17,19 @@ namespace Admin_items.Forms.AdminToolsForms.subForms
         public frmEmployees()
         {
             InitializeComponent();
-            fill_comboboxes();
+            Fill_comboboxes();
         }
 
-        public void fill_comboboxes()
+        public void Fill_comboboxes()
         {
             cmbxDepartment.DataSource = employees.GetAllDepts();
             cmbxEmpJob.DataSource = employees.GetAllJobs();
             cmbxSection.DataSource = employees.GetAllSections();
+        }
+
+        private void btnAddEmployee_Click(object sender, EventArgs e)
+        {
+            employees.AddEmployee(int.Parse(txtEmpNum.Value.ToString()), txtEmpName.Text, cmbxEmpJob.Text, cmbxDepartment.Text, cmbxSection.Text);
         }
     }
 }

@@ -35,7 +35,7 @@ namespace DataLayer.code
             using (var cnn = db_connect())
             {
                 cnn.Open();
-                var rows = cnn.Execute(employees_Quer.Quer_GetEmployee, emp);
+                var rows = cnn.Execute(employees_Quer.Quer_AddEmployee, new { emp.code, emp.name, emp.job, emp.dept, emp.section } );
 
                 return emp;
             }
