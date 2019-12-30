@@ -35,5 +35,11 @@ namespace Admin_items.Forms
             frmUsers frmUsers = new frmUsers();
             frmUsers.ShowDialog();
         }
+
+        private void btnEmployees_Click(object sender, EventArgs e)
+        {
+            frmEmployees frmEmployees = new frmEmployees();
+            frmEmployees.ShowDialog();
+        }
     }
 }
