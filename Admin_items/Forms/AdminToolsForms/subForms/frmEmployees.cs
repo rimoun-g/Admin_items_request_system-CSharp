@@ -31,5 +31,13 @@ namespace Admin_items.Forms.AdminToolsForms.subForms
         {
             employees.AddEmployee(int.Parse(txtEmpNum.Value.ToString()), txtEmpName.Text, cmbxEmpJob.Text, cmbxDepartment.Text, cmbxSection.Text);
         }
+
+        private void txtEmpName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 44)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

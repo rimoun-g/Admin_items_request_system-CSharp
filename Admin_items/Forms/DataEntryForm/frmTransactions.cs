@@ -39,35 +39,46 @@ namespace Admin_items.Forms.DataEntry
         private void txtEmpNumber_KeyDown(object sender, KeyEventArgs e)
         {
 
-            Dictionary<int, string> header_dic = new Dictionary<int, string>();
 
-            String[] Header_List = new string[8] { "ID", "Employee Code", "Item", "Subcategory", "Unit Price", "Quantity", "Delivery Date", "Remarks"};
+
+
 
 
             if (e.KeyCode == Keys.Enter)
             {
- 
-                var emp_code_parser = Int32.TryParse(txtEmpNumber.Text, out int emp_no);
-                if (emp_code_parser)
-                {
-                    lblEmployeeInfo.Text = get_employee_info(emp_no);
-                    dgEmployeeRecord.DataSource = data.get_emp_transactions(emp_no);
-                    
-                    if (dgEmployeeRecord.Columns.Count == 8)
-                    {
-                        for (int i = 0; i < 8; i++)
-                        {
-                            dgEmployeeRecord.Columns[i].HeaderText = Header_List[i];
-                        }
-                    }
+                GetEmployeeTransactions();
 
-
-                }
-                
             }
+
         }
 
-        public void FillItemsComboBox()
+
+        public void GetEmployeeTransactions()
+        {
+
+            Dictionary<int, string> header_dic = new Dictionary<int, string>();
+            string[] Header_List = new string[7] { "Employee Code", "Item", "Subcategory", "Unit Price", "Quantity", "Delivery Date", "Remarks" };
+
+            var emp_code_parser = Int32.TryParse(txtEmpNumber.Text, out int emp_no);
+            if (emp_code_parser)
+            {
+                lblEmployeeInfo.Text = get_employee_info(emp_no);
+                dgEmployeeRecord.DataSource = data.get_emp_transactions(emp_no);
+
+                if (dgEmployeeRecord.Columns.Count == 7)
+                {
+                    for (int i = 0; i < dgEmployeeRecord.Columns.Count; i++)
+                    {
+                        dgEmployeeRecord.Columns[i].HeaderText = Header_List[i];
+                    }
+                }
+
+
+            }
+
+
+        }
+            public void FillItemsComboBox()
         {
             var items = data.Items_names();
             if (items.Count > 0)
@@ -127,10 +138,19 @@ namespace Admin_items.Forms.DataEntry
             else
             {
                 data.AddTransaction(txtEmpNumber.Text, current_choice.item_id, current_choice.id, txtValue.Value, txtQuantity.Value, user_id, dtpkrDeliveryDate.Value.ToString("yyyy/MM/dd"), txtRemarks.Text);
+                GetEmployeeTransactions();
             }
       
                 
 
+        }
+
+        private void txtRemarks_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 44)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

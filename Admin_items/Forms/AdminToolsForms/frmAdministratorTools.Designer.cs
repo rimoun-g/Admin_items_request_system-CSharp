@@ -37,6 +37,7 @@
             // btnUsers
             // 
             this.btnUsers.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnUsers.Enabled = false;
             this.btnUsers.Location = new System.Drawing.Point(30, 125);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(241, 87);

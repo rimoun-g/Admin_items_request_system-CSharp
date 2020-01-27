@@ -78,6 +78,14 @@ namespace db_lib.db_conn
                         ); ");
 
 
+                //users table
+                cnn.Execute(@"CREATE TABLE users(
+                                id    INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+                                user_name TEXT NOT NULL,
+                                password  TEXT NOT NULL,
+                                level INTEGER NOT NULL");
+
+
 
             }
         }

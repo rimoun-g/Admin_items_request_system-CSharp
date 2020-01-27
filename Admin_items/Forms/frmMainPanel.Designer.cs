@@ -68,6 +68,7 @@
             this.btnReportsForm.TabIndex = 2;
             this.btnReportsForm.Text = "Reports";
             this.btnReportsForm.UseVisualStyleBackColor = false;
+            this.btnReportsForm.Click += new System.EventHandler(this.btnReportsForm_Click);
             // 
             // lblUserName
             // 

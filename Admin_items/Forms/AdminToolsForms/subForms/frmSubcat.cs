@@ -103,5 +103,13 @@ namespace Admin_items.Forms.AdminToolsForms.subForms
         {
             Update_item_state();
         }
+
+        private void txtAddUpdateSubCat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 44)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

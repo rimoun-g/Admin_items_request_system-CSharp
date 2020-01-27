@@ -94,6 +94,7 @@
             this.txtEmpName.Name = "txtEmpName";
             this.txtEmpName.Size = new System.Drawing.Size(521, 27);
             this.txtEmpName.TabIndex = 5;
+            this.txtEmpName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmpName_KeyPress);
             // 
             // txtEmpNum
             // 

@@ -44,5 +44,13 @@ namespace Admin_items.Forms.AdminToolsForms.subForms
         {
              users.Add_New_User(txtUserName.Text, txtPw.Text, txtRePw.Text, txtUserLevel.Text);
         }
+
+        private void txtUserName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 44)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

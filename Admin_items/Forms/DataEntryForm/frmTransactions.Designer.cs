@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grpbxEntryTools = new System.Windows.Forms.GroupBox();
             this.txtRemarks = new System.Windows.Forms.TextBox();
             this.lblRemarks = new System.Windows.Forms.Label();
@@ -85,6 +85,7 @@
             this.txtRemarks.Name = "txtRemarks";
             this.txtRemarks.Size = new System.Drawing.Size(470, 27);
             this.txtRemarks.TabIndex = 10;
+            this.txtRemarks.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRemarks_KeyPress);
             // 
             // lblRemarks
             // 
@@ -264,8 +265,8 @@
             // 
             // dgEmployeeRecord
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgEmployeeRecord.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dgEmployeeRecord.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgEmployeeRecord.BackgroundColor = System.Drawing.Color.White;
             this.dgEmployeeRecord.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgEmployeeRecord.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
@@ -280,9 +281,10 @@
             // lblEmployeeInfo
             // 
             this.lblEmployeeInfo.AutoSize = true;
-            this.lblEmployeeInfo.Location = new System.Drawing.Point(19, 40);
+            this.lblEmployeeInfo.Font = new System.Drawing.Font("Times New Roman", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmployeeInfo.Location = new System.Drawing.Point(13, 33);
             this.lblEmployeeInfo.Name = "lblEmployeeInfo";
-            this.lblEmployeeInfo.Size = new System.Drawing.Size(112, 21);
+            this.lblEmployeeInfo.Size = new System.Drawing.Size(111, 19);
             this.lblEmployeeInfo.TabIndex = 0;
             this.lblEmployeeInfo.Text = "Employee Info:";
             // 

@@ -55,6 +55,7 @@
             this.txtAddItem.Name = "txtAddItem";
             this.txtAddItem.Size = new System.Drawing.Size(493, 27);
             this.txtAddItem.TabIndex = 1;
+            this.txtAddItem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddItem_KeyPress);
             // 
             // btnAddItem
             // 
@@ -83,11 +84,11 @@
             // lblDeleteItem
             // 
             this.lblDeleteItem.AutoSize = true;
-            this.lblDeleteItem.Location = new System.Drawing.Point(23, 148);
+            this.lblDeleteItem.Location = new System.Drawing.Point(55, 148);
             this.lblDeleteItem.Name = "lblDeleteItem";
-            this.lblDeleteItem.Size = new System.Drawing.Size(73, 21);
+            this.lblDeleteItem.Size = new System.Drawing.Size(41, 21);
             this.lblDeleteItem.TabIndex = 4;
-            this.lblDeleteItem.Text = "Add Item";
+            this.lblDeleteItem.Text = "Item";
             // 
             // btnDeleteItem
             // 
@@ -131,6 +132,7 @@
             this.txtUpdateItem.Name = "txtUpdateItem";
             this.txtUpdateItem.Size = new System.Drawing.Size(493, 27);
             this.txtUpdateItem.TabIndex = 8;
+            this.txtUpdateItem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUpdateItem_KeyPress);
             // 
             // lblUpdateItem
             // 

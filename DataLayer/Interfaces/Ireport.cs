@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataLayer.code
+namespace DataLayer.Interfaces
 {
-    public class requestedItem_code
+    public interface Ireport
     {
+        
     }
 }

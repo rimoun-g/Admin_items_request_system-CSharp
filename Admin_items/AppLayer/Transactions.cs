@@ -25,7 +25,7 @@ namespace Admin_items.AppLayer
             }
             else
             {
-                info = $"Employee info: {emp.name} - {emp.job} - {emp.dept} - {emp.section}";
+                info = $"Employee info: {emp.name} - {emp.job} \n {string.Concat(Enumerable.Repeat(" ", 26))} {emp.dept} - {emp.section}";
                 return info;
             }
         }

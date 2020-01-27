@@ -85,5 +85,21 @@ namespace Admin_items.Forms.AdminToolsForms.subForms
             items.UpdateItemName(curr_item, txtUpdateItem.Text.ToLower());
             FillComboBox();
         }
+
+        private void txtAddItem_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 44)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtUpdateItem_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 44)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

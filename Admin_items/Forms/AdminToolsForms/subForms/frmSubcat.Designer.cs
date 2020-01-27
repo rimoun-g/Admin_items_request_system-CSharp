@@ -76,6 +76,7 @@
             this.txtAddUpdateSubCat.Name = "txtAddUpdateSubCat";
             this.txtAddUpdateSubCat.Size = new System.Drawing.Size(444, 27);
             this.txtAddUpdateSubCat.TabIndex = 3;
+            this.txtAddUpdateSubCat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAddUpdateSubCat_KeyPress);
             // 
             // cmbxSubCats
             // 

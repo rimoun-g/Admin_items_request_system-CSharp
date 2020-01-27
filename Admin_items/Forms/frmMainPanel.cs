@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Admin_items.Forms.AdminToolsForms;
 using Admin_items.Forms.DataEntry;
 using Admin_items.AppLayer;
+using Admin_items.Forms.Reports;
 
 namespace Admin_items.Forms
 {
@@ -41,6 +42,12 @@ namespace Admin_items.Forms
         private void frmMainPanel_Load(object sender, EventArgs e)
         {
             lblUserName.Text = log_cls.log_user.user_name;
+        }
+
+        private void btnReportsForm_Click(object sender, EventArgs e)
+        {
+            frmCustomizedReport customizedReport = new frmCustomizedReport();
+            customizedReport.ShowDialog();
         }
     }
 }
