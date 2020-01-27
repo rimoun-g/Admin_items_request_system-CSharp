@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.grpbxFilter = new System.Windows.Forms.GroupBox();
             this.btnCalculateStatistics = new System.Windows.Forms.Button();
             this.btnExportToCSV = new System.Windows.Forms.Button();
@@ -40,6 +41,7 @@
             this.lblYear = new System.Windows.Forms.Label();
             this.lblMonth = new System.Windows.Forms.Label();
             this.cmbxMonth = new System.Windows.Forms.ComboBox();
+            this.toolTipCustomizedReports = new System.Windows.Forms.ToolTip(this.components);
             this.grpbxFilter.SuspendLayout();
             this.grpbxResults.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgReportResults)).BeginInit();
@@ -47,6 +49,8 @@
             // 
             // grpbxFilter
             // 
+            this.grpbxFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpbxFilter.Controls.Add(this.lblMonth);
             this.grpbxFilter.Controls.Add(this.cmbxMonth);
             this.grpbxFilter.Controls.Add(this.btnCalculateStatistics);
@@ -64,6 +68,7 @@
             // 
             // btnCalculateStatistics
             // 
+            this.btnCalculateStatistics.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCalculateStatistics.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnCalculateStatistics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalculateStatistics.Location = new System.Drawing.Point(770, 25);
@@ -76,6 +81,7 @@
             // 
             // btnExportToCSV
             // 
+            this.btnExportToCSV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExportToCSV.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnExportToCSV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExportToCSV.Location = new System.Drawing.Point(770, 75);
@@ -88,6 +94,7 @@
             // 
             // lblSearchData
             // 
+            this.lblSearchData.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSearchData.AutoSize = true;
             this.lblSearchData.Location = new System.Drawing.Point(225, 129);
             this.lblSearchData.Name = "lblSearchData";
@@ -97,6 +104,8 @@
             // 
             // txtSearchData
             // 
+            this.txtSearchData.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSearchData.HideSelection = false;
             this.txtSearchData.Location = new System.Drawing.Point(305, 126);
             this.txtSearchData.Name = "txtSearchData";
             this.txtSearchData.Size = new System.Drawing.Size(373, 27);
@@ -105,10 +114,13 @@
             // 
             // grpbxResults
             // 
+            this.grpbxResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpbxResults.Controls.Add(this.dgReportResults);
-            this.grpbxResults.Location = new System.Drawing.Point(20, 189);
+            this.grpbxResults.Location = new System.Drawing.Point(0, 189);
             this.grpbxResults.Name = "grpbxResults";
-            this.grpbxResults.Size = new System.Drawing.Size(972, 408);
+            this.grpbxResults.Size = new System.Drawing.Size(1009, 447);
             this.grpbxResults.TabIndex = 3;
             this.grpbxResults.TabStop = false;
             this.grpbxResults.Text = "Results";
@@ -118,20 +130,26 @@
             this.dgReportResults.AllowUserToAddRows = false;
             this.dgReportResults.AllowUserToDeleteRows = false;
             this.dgReportResults.AllowUserToOrderColumns = true;
+            this.dgReportResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgReportResults.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgReportResults.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgReportResults.BackgroundColor = System.Drawing.Color.White;
-            this.dgReportResults.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgReportResults.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgReportResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgReportResults.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgReportResults.Location = new System.Drawing.Point(6, 26);
+            this.dgReportResults.Location = new System.Drawing.Point(11, 26);
             this.dgReportResults.Name = "dgReportResults";
             this.dgReportResults.ReadOnly = true;
             this.dgReportResults.RowHeadersWidth = 45;
             this.dgReportResults.RowTemplate.Height = 24;
-            this.dgReportResults.Size = new System.Drawing.Size(960, 426);
+            this.dgReportResults.Size = new System.Drawing.Size(986, 409);
             this.dgReportResults.TabIndex = 0;
             // 
             // cmbxYear
             // 
+            this.cmbxYear.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmbxYear.BackColor = System.Drawing.SystemColors.Control;
             this.cmbxYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbxYear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -144,6 +162,7 @@
             // 
             // lblYear
             // 
+            this.lblYear.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblYear.AutoSize = true;
             this.lblYear.Location = new System.Drawing.Point(225, 31);
             this.lblYear.Name = "lblYear";
@@ -153,6 +172,7 @@
             // 
             // lblMonth
             // 
+            this.lblMonth.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblMonth.AutoSize = true;
             this.lblMonth.Location = new System.Drawing.Point(225, 78);
             this.lblMonth.Name = "lblMonth";
@@ -162,6 +182,7 @@
             // 
             // cmbxMonth
             // 
+            this.cmbxMonth.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmbxMonth.BackColor = System.Drawing.SystemColors.Control;
             this.cmbxMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbxMonth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -172,18 +193,21 @@
             this.cmbxMonth.TabIndex = 6;
             this.cmbxMonth.SelectedIndexChanged += new System.EventHandler(this.cmbxMonth_SelectedIndexChanged);
             // 
+            // toolTipCustomizedReports
+            // 
+            this.toolTipCustomizedReports.AutomaticDelay = 700;
+            // 
             // frmCustomizedReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1004, 614);
+            this.ClientSize = new System.Drawing.Size(1009, 636);
             this.Controls.Add(this.grpbxResults);
             this.Controls.Add(this.grpbxFilter);
             this.Font = new System.Drawing.Font("Segoe UI", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MaximizeBox = false;
             this.Name = "frmCustomizedReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customized Reports";
@@ -209,5 +233,6 @@
         private System.Windows.Forms.ComboBox cmbxMonth;
         private System.Windows.Forms.Label lblYear;
         private System.Windows.Forms.ComboBox cmbxYear;
+        private System.Windows.Forms.ToolTip toolTipCustomizedReports;
     }
 }

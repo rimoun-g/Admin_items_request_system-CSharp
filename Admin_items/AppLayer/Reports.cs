@@ -60,7 +60,7 @@ namespace Admin_items.AppLayer
                                 "\nNumber of unique subcategories: " + subcat_count
 
 
-                    );
+                    ,"Statistics of results", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
         }

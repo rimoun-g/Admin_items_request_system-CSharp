@@ -33,6 +33,8 @@ namespace Admin_items.Forms.Reports
             var months = reports.creat_month_list();
             cmbxMonth.DataSource = months;
             cmbxMonth.SelectedIndex = months.Count - 1;
+
+            toolTipCustomizedReports.SetToolTip(txtSearchData, "The search is made in (Employee code, Department, section, item)");
         }
 
         private void txtSearchData_TextChanged(object sender, EventArgs e)
