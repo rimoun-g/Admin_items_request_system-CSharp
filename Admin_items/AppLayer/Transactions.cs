@@ -29,6 +29,11 @@ namespace Admin_items.AppLayer
                 return info;
             }
         }
+        
+        public List<transaction> GellAllEmpTrans()
+        {
+            return transaction_Code.getAllemploeeTransactions();
+        }
 
 
         public List<Employee_Transactions> get_emp_transactions(int code)
@@ -117,6 +122,9 @@ namespace Admin_items.AppLayer
             return items_names;
         }
 
+       
+
+
         public item get_item_by_name(string item)
         {
             item my_item = new item();
@@ -130,6 +138,14 @@ namespace Admin_items.AppLayer
 
             return sub;
         }
+
+
+        public void delete_transactions_perm(string id)
+        {
+            transaction_Code.Delete_Transaction(id);
+        }
+
+
 
         public void AddTransaction(string emp_no, int item_id, int subcat_id, decimal unit_price, decimal quantity, int user_id, string delivery_date, string remarks)
         {

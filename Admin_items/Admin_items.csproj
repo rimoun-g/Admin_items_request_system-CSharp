@@ -74,6 +74,12 @@
     <Compile Include="Forms\AdminToolsForms\frmAdministratorTools.Designer.cs">
       <DependentUpon>frmAdministratorTools.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AdminToolsForms\subForms\frmEditTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminToolsForms\subForms\frmEditTransactions.Designer.cs">
+      <DependentUpon>frmEditTransactions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AdminToolsForms\subForms\frmEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Forms\AdminToolsForms\frmAdministratorTools.resx">
       <DependentUpon>frmAdministratorTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminToolsForms\subForms\frmEditTransactions.resx">
+      <DependentUpon>frmEditTransactions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminToolsForms\subForms\frmEmployees.resx">
       <DependentUpon>frmEmployees.cs</DependentUpon>

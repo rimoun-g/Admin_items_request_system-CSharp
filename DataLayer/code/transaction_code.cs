@@ -23,6 +23,14 @@ namespace DataLayer.code
             }
         }
 
+        public void Delete_Transaction(string id)
+        {
+            using (var cnn = db_connect())
+            {
+                cnn.Open();
+                cnn.Execute(trans_Quer.Quer_DeleteTransaction, new {id});
+            }
+        }
 
         public List<Employee_Transactions> getemploeeTransactions(employee emp)
         {
@@ -31,6 +39,18 @@ namespace DataLayer.code
                 cnn.Open();
                 int emp_no = emp.code;
                 var result = cnn.Query<Employee_Transactions>(trans_Quer.Quer_GetEmployeeTrans, new { emp_no });
+
+                return result.ToList();
+            }
+
+        }
+
+        public List<transaction> getAllemploeeTransactions()
+        {
+            using (var cnn = db_connect())
+            {
+                cnn.Open();
+                var result = cnn.Query<transaction>(trans_Quer.Quer_GetAllEmployeeTrans);
 
                 return result.ToList();
             }
