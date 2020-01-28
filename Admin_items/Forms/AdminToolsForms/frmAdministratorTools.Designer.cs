@@ -32,12 +32,12 @@
             this.btnItems = new System.Windows.Forms.Button();
             this.btnSubcats = new System.Windows.Forms.Button();
             this.btnEmployees = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnUsers
             // 
             this.btnUsers.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnUsers.Enabled = false;
             this.btnUsers.Location = new System.Drawing.Point(30, 125);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(241, 87);
@@ -79,12 +79,23 @@
             this.btnEmployees.UseVisualStyleBackColor = false;
             this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.button1.Location = new System.Drawing.Point(30, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(241, 87);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Edit Transactions";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // frmAdministratorTools
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(564, 356);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnEmployees);
             this.Controls.Add(this.btnSubcats);
             this.Controls.Add(this.btnItems);
@@ -106,5 +117,6 @@
         private System.Windows.Forms.Button btnItems;
         private System.Windows.Forms.Button btnSubcats;
         private System.Windows.Forms.Button btnEmployees;
+        private System.Windows.Forms.Button button1;
     }
 }

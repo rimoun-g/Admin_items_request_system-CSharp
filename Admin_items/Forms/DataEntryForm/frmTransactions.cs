@@ -17,6 +17,7 @@ namespace Admin_items.Forms.DataEntry
     {
         int user_id = 125;
 
+        public user Current_user = new user();
 
         Transactions data = new Transactions();
         subcat current_choice;
@@ -137,7 +138,7 @@ namespace Admin_items.Forms.DataEntry
             }
             else
             {
-                data.AddTransaction(txtEmpNumber.Text, current_choice.item_id, current_choice.id, txtValue.Value, txtQuantity.Value, user_id, dtpkrDeliveryDate.Value.ToString("yyyy/MM/dd"), txtRemarks.Text);
+                data.AddTransaction(txtEmpNumber.Text, current_choice.item_id, current_choice.id, txtValue.Value, txtQuantity.Value, Current_user.id, dtpkrDeliveryDate.Value.ToString("yyyy/MM/dd"), txtRemarks.Text);
                 GetEmployeeTransactions();
             }
       

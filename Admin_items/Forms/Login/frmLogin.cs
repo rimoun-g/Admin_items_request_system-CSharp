@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataLayer.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace Admin_items.Forms.Login
 {
     public partial class frmLogin : Form
     {
+      
+      
         frmMainPanel mainPanel = new frmMainPanel();
         public frmLogin()
         {
@@ -22,9 +25,10 @@ namespace Admin_items.Forms.Login
         {
             AppLayer.Login login = new AppLayer.Login();
             var usr = login.LoggedUser(txtUserName.Text.ToLower(), txtPw.Text);
-            if (usr)
+            if (usr.Item1)
             {
                 this.Hide();
+                mainPanel.Current_User = usr.Item2;
                 mainPanel.Show();
             }
         }

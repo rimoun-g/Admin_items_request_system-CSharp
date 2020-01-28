@@ -60,8 +60,8 @@ namespace Admin_items.Forms.Reports
 
         void rename_datagrid_header()
         {
-            string[] Header_List = new string[11] { "Employee code", "Employee Name", "Position", "Department", "Section", "Item", "Subcategory", "Unit Price", "Quantity", "Delivery Date", "Remarks" };
-            if (dgReportResults.Columns.Count == 11)
+            string[] Header_List = new string[12] { "Employee code", "Employee Name", "Position", "Department", "Section", "Item", "Subcategory", "Unit Price", "Quantity", "Delivery Date", "Remarks", "User Name" };
+            if (dgReportResults.Columns.Count == 12)
             {
                 for (int i = 0; i < dgReportResults.Columns.Count; i++)
                 {

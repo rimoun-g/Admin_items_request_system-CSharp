@@ -10,13 +10,17 @@ using System.Windows.Forms;
 using Admin_items.Forms.AdminToolsForms;
 using Admin_items.Forms.DataEntry;
 using Admin_items.AppLayer;
+using Admin_items.Forms.Login;
 using Admin_items.Forms.Reports;
+using DataLayer.Models;
 
 namespace Admin_items.Forms
 {
     public partial class frmMainPanel : Form
     {
-        AppLayer.Login log_cls = new AppLayer.Login();
+        public int UserID { get; set; }
+
+        public user Current_User = new user();
         public frmMainPanel()
         {
             InitializeComponent();
@@ -25,13 +29,22 @@ namespace Admin_items.Forms
         private void btnAddTransactionsForm_Click(object sender, EventArgs e)
         {
             frmTransactions frmTransactions = new frmTransactions();
+            frmTransactions.Current_user = Current_User;
             frmTransactions.ShowDialog();
         }
 
         private void btnAdminToolsForm_Click(object sender, EventArgs e)
         {
-            frmAdministratorTools frmAdministratorTools = new frmAdministratorTools();
-            frmAdministratorTools.ShowDialog();
+            if (Current_User.level == 1)
+            {
+                frmAdministratorTools frmAdministratorTools = new frmAdministratorTools();
+                frmAdministratorTools.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("You do not have enough privileges", "Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+
         }
 
         private void frmMainPanel_FormClosing(object sender, FormClosingEventArgs e)
@@ -41,7 +54,7 @@ namespace Admin_items.Forms
 
         private void frmMainPanel_Load(object sender, EventArgs e)
         {
-            lblUserName.Text = log_cls.log_user.user_name;
+            lblUserName.Text = "User: " +Current_User.user_name.ToUpper();
         }
 
         private void btnReportsForm_Click(object sender, EventArgs e)

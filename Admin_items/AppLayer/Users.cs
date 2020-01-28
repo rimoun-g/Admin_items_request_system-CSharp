@@ -22,7 +22,7 @@ namespace Admin_items.AppLayer
 
             if (!string.IsNullOrEmpty(user_name) & !string.IsNullOrEmpty(pw) & (level > 0 & level < 4) & (pw == repw))
             {
-                if (!check_username_exists(user_name))
+                if (!check_username_exists(user_name).Item1)
                 {
                     user_Code.add_user(user_name.ToLower(), pw, level);
                     MessageBox.Show("The user has been added successfully!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -37,23 +37,44 @@ namespace Admin_items.AppLayer
                 MessageBox.Show("Please check the password & level fields again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public void Update_User(user up_user, string pw, string repw)
+        {
+ 
+            if (!string.IsNullOrEmpty(up_user.user_name) & !string.IsNullOrEmpty(pw) & (up_user.level > 0 & up_user.level < 4) & (pw == repw))
+            {
+                if (check_username_exists(up_user.user_name).Item1)
+                {
+                    user_Code.Update_user(up_user, pw);
+                    MessageBox.Show("The user has been updated successfully!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("This username is not found, please user firstly", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please check the password & level fields again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         public List<user> Get_All_Users()
         {
             var users = user_Code.GetAllUsers();
 
             return users;
         }
-        public bool check_username_exists(string username)
+        public Tuple<bool, user> check_username_exists(string username)
         {
             var usrs = Get_All_Users();
             foreach (var usr in usrs)
             {
                 if (usr.user_name == username.ToLower())
                 {
-                    return true;
+                    return Tuple.Create<bool, user>(true,usr);
                 }
             }
-            return false;
+            return Tuple.Create<bool, user>(false, null);
         }
 
         public user Get_User_By_Name(string username)

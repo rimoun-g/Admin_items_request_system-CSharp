@@ -27,11 +27,11 @@ namespace Admin_items.AppLayer
             {
                 using (var file = File.CreateText(fileName))
                 {
-                    file.WriteLine(string.Join(",", "Employee code", "Employee Name", "Position", "Department", "Section", "Item", "Subcategory", "Unit Price", "Quantity", "Delivery Date", "Remarks"));
+                    file.WriteLine(string.Join(",", "Employee code", "Employee Name", "Position", "Department", "Section", "Item", "Subcategory", "Unit Price", "Quantity", "Delivery Date", "Remarks", "User Name"));
 
                     foreach (var item in trans)
                     {
-                        file.WriteLine(string.Join(",", item.emp_no, item.name, item.dept, item.section, item.item, item.subcat, item.unit_price, item.quantity, item.delivery_date, item.remarks));
+                        file.WriteLine(string.Join(",", item.emp_no, item.name, item.job, item.dept, item.section, item.item, item.subcat, item.unit_price, item.quantity, item.delivery_date, item.remarks, item.user_name));
                     }
                 }
                 MessageBox.Show("Your report:\n" + fileName + "\nWas Saved Successfully!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);

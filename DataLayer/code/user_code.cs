@@ -34,6 +34,29 @@ namespace DataLayer.code
 
         }
 
+        public user UpdateUser(user user)
+        {
+            using (var cnn = db_connect())
+            {
+                cnn.Open();
+                var rows = cnn.Execute(users_Quer.Quer_UpdateUser, new {user.id, user.user_name, user.password, user.level });
+
+                return user;
+            }
+        }
+
+
+        public void Update_user(user inv_user, string pw)
+        {
+            user update_user = new user();
+            update_user.id = inv_user.id;
+            update_user.level = inv_user.level;
+            update_user.user_name = inv_user.user_name;
+            update_user.password = sha256(pw);
+            UpdateUser(update_user);
+
+        }
+
         public List<user> GetAllUsers()
         {
             using (var cnn = db_connect())

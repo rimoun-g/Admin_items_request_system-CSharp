@@ -33,7 +33,6 @@
             this.lblLevel = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtPw = new System.Windows.Forms.TextBox();
-            this.txtUserLevel = new System.Windows.Forms.TextBox();
             this.btnSearchUser = new System.Windows.Forms.Button();
             this.btnAddUser = new System.Windows.Forms.Button();
             this.btnUpdateUser = new System.Windows.Forms.Button();
@@ -41,6 +40,7 @@
             this.txtRePw = new System.Windows.Forms.TextBox();
             this.lblRePw = new System.Windows.Forms.Label();
             this.lblLevelInformation = new System.Windows.Forms.Label();
+            this.cmbxLevel = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblUserName
@@ -75,7 +75,7 @@
             this.txtUserName.Location = new System.Drawing.Point(143, 65);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(269, 27);
-            this.txtUserName.TabIndex = 3;
+            this.txtUserName.TabIndex = 0;
             this.txtUserName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserName_KeyPress);
             // 
             // txtPw
@@ -84,14 +84,7 @@
             this.txtPw.Name = "txtPw";
             this.txtPw.PasswordChar = '*';
             this.txtPw.Size = new System.Drawing.Size(269, 27);
-            this.txtPw.TabIndex = 4;
-            // 
-            // txtUserLevel
-            // 
-            this.txtUserLevel.Location = new System.Drawing.Point(143, 190);
-            this.txtUserLevel.Name = "txtUserLevel";
-            this.txtUserLevel.Size = new System.Drawing.Size(269, 27);
-            this.txtUserLevel.TabIndex = 5;
+            this.txtPw.TabIndex = 1;
             // 
             // btnSearchUser
             // 
@@ -127,6 +120,7 @@
             this.btnUpdateUser.TabIndex = 8;
             this.btnUpdateUser.Text = "Update User";
             this.btnUpdateUser.UseVisualStyleBackColor = false;
+            this.btnUpdateUser.Click += new System.EventHandler(this.btnUpdateUser_Click);
             // 
             // btnDeleteUser
             // 
@@ -145,7 +139,7 @@
             this.txtRePw.Name = "txtRePw";
             this.txtRePw.PasswordChar = '*';
             this.txtRePw.Size = new System.Drawing.Size(269, 27);
-            this.txtRePw.TabIndex = 11;
+            this.txtRePw.TabIndex = 2;
             // 
             // lblRePw
             // 
@@ -165,12 +159,28 @@
             this.lblLevelInformation.TabIndex = 12;
             this.lblLevelInformation.Text = "User Level: 1 = System administrator, 2 = Super user, 3 = Normal user";
             // 
+            // cmbxLevel
+            // 
+            this.cmbxLevel.BackColor = System.Drawing.Color.Khaki;
+            this.cmbxLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxLevel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbxLevel.FormattingEnabled = true;
+            this.cmbxLevel.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.cmbxLevel.Location = new System.Drawing.Point(143, 187);
+            this.cmbxLevel.Name = "cmbxLevel";
+            this.cmbxLevel.Size = new System.Drawing.Size(269, 28);
+            this.cmbxLevel.TabIndex = 13;
+            // 
             // frmUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(755, 268);
+            this.Controls.Add(this.cmbxLevel);
             this.Controls.Add(this.lblLevelInformation);
             this.Controls.Add(this.txtRePw);
             this.Controls.Add(this.lblRePw);
@@ -178,7 +188,6 @@
             this.Controls.Add(this.btnUpdateUser);
             this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.btnSearchUser);
-            this.Controls.Add(this.txtUserLevel);
             this.Controls.Add(this.txtPw);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.lblLevel);
@@ -203,7 +212,6 @@
         private System.Windows.Forms.Label lblLevel;
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.TextBox txtPw;
-        private System.Windows.Forms.TextBox txtUserLevel;
         private System.Windows.Forms.Button btnSearchUser;
         private System.Windows.Forms.Button btnAddUser;
         private System.Windows.Forms.Button btnUpdateUser;
@@ -211,5 +219,6 @@
         private System.Windows.Forms.TextBox txtRePw;
         private System.Windows.Forms.Label lblRePw;
         private System.Windows.Forms.Label lblLevelInformation;
+        private System.Windows.Forms.ComboBox cmbxLevel;
     }
 }

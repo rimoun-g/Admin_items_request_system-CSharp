@@ -17,7 +17,7 @@ namespace Admin_items
         [STAThread]
         static void Main()
         {
-            Application.Run(new frmMainPanel());
+            Application.Run(new frmLogin());
         }
     }
 }

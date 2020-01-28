@@ -17,6 +17,6 @@ namespace DataLayer.Models
         public string quantity { get; set; }
         public string delivery_date { get; set; }
         public string remarks { get; set; }
-        //public string username { get; set; }
+        public string user_name { get; set; }
     }
 }

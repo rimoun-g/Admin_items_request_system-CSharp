@@ -14,7 +14,7 @@ namespace Admin_items.AppLayer
         item_code item_Code = new item_code();
 
         
-        public List<string> items_names = new List<string>();
+        //public List<string> items_names = new List<string>();
 
          
 
