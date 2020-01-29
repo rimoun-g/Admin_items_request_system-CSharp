@@ -14,21 +14,21 @@ namespace Admin_items.Forms.AdminToolsForms.subForms
     public partial class frmEditTransactions : Form
     {
         public Transactions transactions = new Transactions();
+        public AppLayer.Reports reports = new AppLayer.Reports();
         public frmEditTransactions()
         {
             InitializeComponent();
         }
         public void Load_Transactions()
         {
+           
+            lstbxTransID.DataSource = null;
+            chklstbxTransactions.DataSource = null;
             lstbxTransID.Items.Clear();
             chklstbxTransactions.Items.Clear();
-           
-            var trans = transactions.GellAllEmpTrans();
-            foreach (var item in trans)
-            {
-                lstbxTransID.Items.Add(item.id);
-                chklstbxTransactions.Items.Add(item.id + " - " +item.unit_price + " - " + item.quantity + " - " + item.remarks + " - " + item.delivery_date + " - " + item.emp_no);
-            }
+            var trans =  transactions.Load_Trans_For_Edit();
+            lstbxTransID.DataSource = trans.Item1;
+            chklstbxTransactions.DataSource = trans.Item2;
 
         }
 
@@ -39,16 +39,22 @@ namespace Admin_items.Forms.AdminToolsForms.subForms
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
             var chkd = chklstbxTransactions.CheckedItems;
-                foreach (var item in chkd)
+           DialogResult confirmation = MessageBox.Show($"Are you sure you want to delete {chkd.Count} record(s)?!\nThis step CANNOT be undone","Confirm Deleting records permanently"
+                , MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (confirmation == DialogResult.Yes)
             {
-                
-                transactions.delete_transactions_perm(lstbxTransID.Items[chklstbxTransactions.Items.IndexOf(item)].ToString());
+                foreach (var item in chkd)
+                {
+
+                    transactions.delete_transactions_perm(lstbxTransID.Items[chklstbxTransactions.Items.IndexOf(item)].ToString());
+
+                }
+                Load_Transactions();
+                MessageBox.Show("The transactions has been deleted successfully!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
             }
-            MessageBox.Show("The transactions has been deleted successfully!", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Load_Transactions();
+               
         }
     }
 }

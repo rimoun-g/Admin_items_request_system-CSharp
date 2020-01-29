@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using DataLayer.code;
@@ -14,6 +15,7 @@ namespace Admin_items.AppLayer
 
         Employees employees = new Employees();
         transaction_code transaction_Code = new transaction_code();
+        public Reports reports = new Reports();
         SubCats subCats = new SubCats();
         public string get_employee_by_code(int code)
         {
@@ -145,7 +147,22 @@ namespace Admin_items.AppLayer
             transaction_Code.Delete_Transaction(id);
         }
 
-
+        public Tuple<List<string>,List<string>> Load_Trans_For_Edit()
+        {
+            var trans =GellAllEmpTrans();
+            var transfulltext = reports.GetAllTransactions();
+            List<string> itemIDS = new List<string>();
+            List<string> full_records = new List<string>();
+            for (int i = 0; i < trans.Count; i++)
+            {
+                itemIDS.Add(trans[i].id.ToString());
+                string fullrec = $"{trans[i].id.ToString()} | {transfulltext[i].emp_no} | {transfulltext[i].name} | {transfulltext[i].job} | {transfulltext[i].dept} | {transfulltext[i].section} | {transfulltext[i].item} | {transfulltext[i].subcat}" +
+                    $" | {transfulltext[i].unit_price} | {transfulltext[i].quantity} | {transfulltext[i].remarks} | {transfulltext[i].delivery_date} | {transfulltext[i].user_name}"; 
+                full_records.Add(fullrec);
+               
+            }
+            return Tuple.Create<List<string>, List<string>>(itemIDS, full_records);
+        }
 
         public void AddTransaction(string emp_no, int item_id, int subcat_id, decimal unit_price, decimal quantity, int user_id, string delivery_date, string remarks)
         {

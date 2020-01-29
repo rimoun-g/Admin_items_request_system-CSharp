@@ -35,8 +35,12 @@
             // 
             // chklstbxTransactions
             // 
+            this.chklstbxTransactions.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.chklstbxTransactions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.chklstbxTransactions.FormattingEnabled = true;
+            this.chklstbxTransactions.HorizontalScrollbar = true;
             this.chklstbxTransactions.Location = new System.Drawing.Point(12, 21);
             this.chklstbxTransactions.Name = "chklstbxTransactions";
             this.chklstbxTransactions.Size = new System.Drawing.Size(943, 376);
@@ -55,6 +59,7 @@
             // 
             // btnDelete
             // 
+            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnDelete.BackColor = System.Drawing.Color.PaleVioletRed;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Location = new System.Drawing.Point(317, 415);
@@ -77,7 +82,6 @@
             this.Font = new System.Drawing.Font("Segoe UI", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MaximizeBox = false;
             this.Name = "frmEditTransactions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Delete Transactions";

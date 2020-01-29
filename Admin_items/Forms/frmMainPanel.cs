@@ -25,7 +25,6 @@ namespace Admin_items.Forms
         {
             InitializeComponent();
         }
-
         private void btnAddTransactionsForm_Click(object sender, EventArgs e)
         {
             frmTransactions frmTransactions = new frmTransactions();
@@ -55,6 +54,14 @@ namespace Admin_items.Forms
         private void frmMainPanel_Load(object sender, EventArgs e)
         {
             lblUserName.Text = "User: " +Current_User.user_name.ToUpper();
+            if (Current_User.level ==1 )
+            {
+                btnAdminToolsForm.Enabled = true;
+            }
+            else
+            {
+                btnAdminToolsForm.Enabled = false;
+            }
         }
 
         private void btnReportsForm_Click(object sender, EventArgs e)
