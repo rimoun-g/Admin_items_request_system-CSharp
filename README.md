@@ -9,7 +9,7 @@ For many businesses, there are employees who recieve items to be used by them. T
 - Track the items, quantities, value.  
 
 Basic plan of the project:
-![alt text]( http://drive.google.com/uc?export=view&id=1xzwYn7ja3b26Kz6dTD2Em6Ce5OBv-kyA "Basic plan of the project")
+![alt text]( https://i.imgur.com/PMvPJog.jpg "Basic plan of the project")
 
 ## Implementation:
 The application has three main windows:  
