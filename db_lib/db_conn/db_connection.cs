@@ -6,8 +6,11 @@ using Dapper;
 
 namespace db_lib.db_conn
 {
+    //for creating database connection and creating database file if it doesnt exist
+
     public class db_connection
     {
+        // database name
         private string db_file_name = "My_admin_db.db";
         public string Db_file_name
         {
@@ -19,6 +22,7 @@ namespace db_lib.db_conn
 
         public SQLiteConnection db_connect()
         {
+            // connection to the database
             if (System.IO.File.Exists(Db_file_name))
             {
                 return new SQLiteConnection($"Data Source={Db_file_name};Version=3;Compress=True;"); 
@@ -34,6 +38,7 @@ namespace db_lib.db_conn
 
         private void CreateDatabase()
         {
+            // creating database file in case it does not exist
             SQLiteConnection.CreateFile(Db_file_name);
             using (var cnn = db_connect())
             {
@@ -47,7 +52,7 @@ namespace db_lib.db_conn
     level INTEGER NOT NULL
 ); ");
 
-
+                //adding default username to open the application, should be deleted after creating a new file
                 cnn.Execute(@"INSERT INTO users (user_name, password, level) VALUES ('rimoun', '', 1)");
 
 
