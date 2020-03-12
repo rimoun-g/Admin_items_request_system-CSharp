@@ -189,7 +189,7 @@
             this.MaximizeBox = false;
             this.Name = "frmEmployees";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmEployees";
+            this.Text = "Add Employee";
             ((System.ComponentModel.ISupportInitialize)(this.txtEmpNum)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

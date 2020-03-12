@@ -69,5 +69,17 @@ namespace Admin_items.Forms
             frmCustomizedReport customizedReport = new frmCustomizedReport();
             customizedReport.ShowDialog();
         }
+
+        private void btnAddEmployeeExternal_Click(object sender, EventArgs e)
+        {
+
+            AdminToolsForms.subForms.frmEmployees  employees = new AdminToolsForms.subForms.frmEmployees();
+            employees.ShowDialog();
+        }
+
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This applications was programmed by Rimoun George\nTranslator @ HR & Admin Department - AP","About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

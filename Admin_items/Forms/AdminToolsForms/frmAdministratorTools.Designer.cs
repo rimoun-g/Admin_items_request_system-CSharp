@@ -32,7 +32,7 @@
             this.btnItems = new System.Windows.Forms.Button();
             this.btnSubcats = new System.Windows.Forms.Button();
             this.btnEmployees = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEditTransactions = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnUsers
@@ -71,23 +71,25 @@
             // btnEmployees
             // 
             this.btnEmployees.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnEmployees.Location = new System.Drawing.Point(294, 125);
+            this.btnEmployees.Location = new System.Drawing.Point(294, 12);
             this.btnEmployees.Name = "btnEmployees";
             this.btnEmployees.Size = new System.Drawing.Size(234, 87);
             this.btnEmployees.TabIndex = 3;
             this.btnEmployees.Text = "Employees";
             this.btnEmployees.UseVisualStyleBackColor = false;
+            this.btnEmployees.Visible = false;
             this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
             // 
-            // button1
+            // btnEditTransactions
             // 
-            this.button1.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.button1.Location = new System.Drawing.Point(30, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(241, 87);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Edit Transactions";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnEditTransactions.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnEditTransactions.Location = new System.Drawing.Point(294, 125);
+            this.btnEditTransactions.Name = "btnEditTransactions";
+            this.btnEditTransactions.Size = new System.Drawing.Size(234, 87);
+            this.btnEditTransactions.TabIndex = 4;
+            this.btnEditTransactions.Text = "Edit Transactions";
+            this.btnEditTransactions.UseVisualStyleBackColor = false;
+            this.btnEditTransactions.Click += new System.EventHandler(this.btnEditTransactions_Click);
             // 
             // frmAdministratorTools
             // 
@@ -95,7 +97,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(564, 356);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnEditTransactions);
             this.Controls.Add(this.btnEmployees);
             this.Controls.Add(this.btnSubcats);
             this.Controls.Add(this.btnItems);
@@ -117,6 +119,6 @@
         private System.Windows.Forms.Button btnItems;
         private System.Windows.Forms.Button btnSubcats;
         private System.Windows.Forms.Button btnEmployees;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEditTransactions;
     }
 }

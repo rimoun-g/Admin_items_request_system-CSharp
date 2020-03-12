@@ -41,5 +41,11 @@ namespace Admin_items.Forms
             frmEmployees frmEmployees = new frmEmployees();
             frmEmployees.ShowDialog();
         }
+
+        private void btnEditTransactions_Click(object sender, EventArgs e)
+        {
+            frmEditTransactions EditTransations = new frmEditTransactions();
+            EditTransations.ShowDialog();
+        }
     }
 }

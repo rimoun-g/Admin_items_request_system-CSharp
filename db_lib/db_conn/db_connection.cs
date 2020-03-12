@@ -38,7 +38,21 @@ namespace db_lib.db_conn
             using (var cnn = db_connect())
             {
                 cnn.Open();
-                
+
+                //users table
+                cnn.Execute(@"CREATE TABLE users(
+    id    INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+    user_name TEXT NOT NULL,
+    password  TEXT NOT NULL,
+    level INTEGER NOT NULL
+); ");
+
+
+                cnn.Execute(@"INSERT INTO users (user_name, password, level) VALUES ('rimoun', '', 1)");
+
+
+
+
                 //employees table
                 cnn.Execute(
 
@@ -65,29 +79,21 @@ namespace db_lib.db_conn
 
                 //transactions table
                 cnn.Execute(@"CREATE TABLE transactions (
-                            id    INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-                            emp_no    INTEGER NOT NULL,
-                            item_id   INTEGER NOT NULL,
-                            subcat_id INTEGER,
-                            unit_price NUMERIC NOT NULL,
-                            quantity  NUMERIC NOT NULL,
-                            user_id   INTEGER,
-                            date  TEXT NOT NULL
-                            delivery_date  TEXT NOT NULL
-                            remarks  TEXT
-                        ); ");
+
+    id    INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+    emp_no    INTEGER NOT NULL,
+    item_id   INTEGER NOT NULL,
+    subcat_id INTEGER,
+    unit_price    NUMERIC NOT NULL,
+    quantity  NUMERIC NOT NULL,
+    user_id   INTEGER,
+    date  TEXT NOT NULL,
+    delivery_date TEXT,
+    remarks   TEXT
+); ");
 
 
-                //users table
-                cnn.Execute(@"CREATE TABLE users(
-                                id    INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-                                user_name TEXT NOT NULL,
-                                password  TEXT NOT NULL,
-                                level INTEGER NOT NULL");
-
-
-
-            }
+                          }
         }
 
     }
