@@ -35,5 +35,3 @@ The application has three main windows:
 
 ## SQL:
 The used databse to store records is a Sqlite file, however the same can be done with Sql server.
-
-**Note:** The project is not documented yet, it will be documented soon.
