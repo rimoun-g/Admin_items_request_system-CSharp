@@ -13,6 +13,11 @@ namespace DataLayer.code
     {
         Transactions_quer trans_Quer = new Transactions_quer();
 
+        /// <summary>
+        /// Adding a new transaction to the transactions table
+        /// </summary>
+        /// <param name="trans">the information included in transaction class</param>
+        /// <returns>returns the transaction class</returns>
         public transaction AddTransaction(transaction trans)
         {
             using (var cnn = db_connect())
@@ -23,6 +28,10 @@ namespace DataLayer.code
             }
         }
 
+        /// <summary>
+        /// Delete a specific transaction based on its id
+        /// </summary>
+        /// <param name="id">the transaction id in the transactions table</param>
         public void Delete_Transaction(string id)
         {
             using (var cnn = db_connect())
@@ -34,7 +43,11 @@ namespace DataLayer.code
 
 
         
-
+        /// <summary>
+        /// Get all transactions for a specific employee based on the employee number
+        /// </summary>
+        /// <param name="emp">the employee number</param>
+        /// <returns>returns list of employee transactions class</returns>
         public List<Employee_Transactions> getemploeeTransactions(employee emp)
         {
             using (var cnn = db_connect())
@@ -48,6 +61,10 @@ namespace DataLayer.code
 
         }
 
+        /// <summary>
+        /// Get the transactions of all employees
+        /// </summary>
+        /// <returns></returns>
         public List<transaction> getAllemploeeTransactions()
         {
             using (var cnn = db_connect())

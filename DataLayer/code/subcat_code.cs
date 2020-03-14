@@ -13,6 +13,10 @@ namespace DataLayer.code
     public class subcat_code : db_connection, Isubcat
     {
         Subcats_quer subcat_Quer = new Subcats_quer();
+        /// <summary>
+        /// Get all items subcategories
+        /// </summary>
+        /// <returns>returns a list of all subcategories</returns>
         public List<subcat> GetAllSubcats()
         {
             using (var cnn = db_connect())
@@ -25,6 +29,11 @@ namespace DataLayer.code
 
         }
 
+        /// <summary>
+        /// Adds a new subcategory to an item
+        /// </summary>
+        /// <param name="subcat_name">the name of subcategory</param>
+        /// <returns>returns the s</returns>
         public subcat AddSubCat(subcat subcat_name)
         {
             using (var cnn = db_connect())
@@ -36,7 +45,12 @@ namespace DataLayer.code
             }
         }
 
-
+        /// <summary>
+        /// Update a subcategory of an item 
+        /// </summary>
+        /// <param name="sub">subcategory loaded in class</param>
+        /// <param name="newName"> the new name of the subcategory</param>
+        /// <returns></returns>
         public subcat UPdateSubcatName(subcat sub, string newName)
         {
             using (var cnn = db_connect())
@@ -51,6 +65,11 @@ namespace DataLayer.code
         }
 
 
+        /// <summary>
+        /// Update the subcategory state in case of deletion
+        /// </summary>
+        /// <param name="sub">the subcategory</param>
+        /// <returns></returns>
         public subcat UPdateItemState(subcat sub)
         {
             using (var cnn = db_connect())

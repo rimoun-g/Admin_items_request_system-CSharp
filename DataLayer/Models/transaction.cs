@@ -6,6 +6,7 @@ namespace DataLayer.Models
 {
     public class transaction
     {
+        // transaction information
         public int id { get; set; }
         public int emp_no { get; set; }
         public int item_id { get; set; }

@@ -6,6 +6,7 @@ namespace DataLayer.Models
 {
     public class subcat
     {
+        // subcategory information
         public int id { get; set; }
         public int item_id { get; set; }
         public string name { get; set; }

@@ -15,6 +15,11 @@ namespace DataLayer.code
        
 
         Employees_quer employees_Quer = new Employees_quer();
+        /// <summary>
+        /// get employee by its employee number
+        /// </summary>
+        /// <param name="code"></param>
+        /// <returns></returns>
         public employee GetEmployee(int code)
         {
 
@@ -28,7 +33,11 @@ namespace DataLayer.code
         }
 
         
-
+        /// <summary>
+        /// add a new employee to employees table
+        /// </summary>
+        /// <param name="emp"></param>
+        /// <returns></returns>
         public employee AddEmployee(employee emp)
         {
 
@@ -39,10 +48,12 @@ namespace DataLayer.code
 
                 return emp;
             }
-
-
         }
 
+        /// <summary>
+        /// get all employees 
+        /// </summary>
+        /// <returns></returns>
         public List<employee> GetAllemployees()
         {
             using (var cnn = db_connect())

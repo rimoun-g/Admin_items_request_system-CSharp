@@ -14,6 +14,11 @@ namespace DataLayer.code
     {
         items_quer Items_Quer = new items_quer();
 
+        /// <summary>
+        /// Add a new item
+        /// </summary>
+        /// <param name="itemname"></param>
+        /// <returns></returns>
         public item AddItem(item itemname)
         {
             using (var cnn = db_connect())
@@ -25,7 +30,10 @@ namespace DataLayer.code
             }
         }
 
-
+        /// <summary>
+        /// Get all items in items table
+        /// </summary>
+        /// <returns>returns a list of items</returns>
         public List<item> GetAllItems()
         {
             using (var cnn = db_connect())
@@ -38,6 +46,11 @@ namespace DataLayer.code
 
         }
 
+        /// <summary>
+        /// get item state if its marked as deleted or not
+        /// </summary>
+        /// <param name="item_name"></param>
+        /// <returns></returns>
         public item GetItem(string item_name)
         {
             using (var cnn = db_connect())
@@ -59,7 +72,11 @@ namespace DataLayer.code
             }
         }
 
-
+        /// <summary>
+        /// update the state of an item
+        /// </summary>
+        /// <param name="itemname"></param>
+        /// <returns></returns>
         public item UPdateItemState(item itemname)
         {
             using (var cnn = db_connect())
@@ -80,7 +97,12 @@ namespace DataLayer.code
             }
         }
 
-
+        /// <summary>
+        /// update the name of an item
+        /// </summary>
+        /// <param name="itemname"></param>
+        /// <param name="newName"></param>
+        /// <returns></returns>
         public item UPdateItemName(item itemname, string newName)
         {
             using (var cnn = db_connect())

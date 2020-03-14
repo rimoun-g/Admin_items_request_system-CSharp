@@ -6,6 +6,7 @@ namespace DataLayer.Models
 {
     public class user
     {
+        // user information
         public int id { get; set; }
         public string user_name { get; set; }
         public string password { get; set; }

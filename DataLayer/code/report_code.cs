@@ -15,6 +15,11 @@ namespace DataLayer.code
 
         Reports_quer report_quer = new Reports_quer();
 
+
+        /// <summary>
+        /// Get all records of transactions
+        /// </summary>
+        /// <returns> returns a list of transactions</returns>
         public List<Report> GetAllTransactions()
         {
             using (var cnn = db_connect())
@@ -25,6 +30,13 @@ namespace DataLayer.code
             }
         }
 
+        /// <summary>
+        /// searrching the transactions by year and month
+        /// </summary>
+        /// <param name="keyword"></param>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <returns>returns a list of transactions</returns>
         public List<Report> GetFilteredTransactions_Y_Mon(string keyword, string year, string month)
         {
             keyword = "%" + keyword;
@@ -35,6 +47,13 @@ namespace DataLayer.code
                 return result.ToList();
             }
         }
+
+        /// <summary>
+        /// searching the transactions by month only
+        /// </summary>
+        /// <param name="keyword"></param>
+        /// <param name="month"></param>
+        /// <returns>returns a list of transactions</returns>
         public List<Report> GetFilteredTransactions_By_Mon_only(string keyword, string month)
         {
             keyword = "%" + keyword;
@@ -45,6 +64,13 @@ namespace DataLayer.code
                 return result.ToList();
             }
         }
+
+        /// <summary>
+        /// searching the transactions by year only
+        /// </summary>
+        /// <param name="keyword"></param>
+        /// <param name="year"></param>
+        /// <returns></returns>
         public List<Report> GetFilteredTransactionsByYear(string keyword, string year)
         {
             keyword = "%" + keyword ;
@@ -56,6 +82,11 @@ namespace DataLayer.code
             }
         }
 
+        /// <summary>
+        /// searching the transactions by a serch word only - no month or year specified
+        /// </summary>
+        /// <param name="keyword"></param>
+        /// <returns></returns>
         public List<Report> GetAllFilteredTransactions(string keyword)
         {
             keyword = "%" + keyword;

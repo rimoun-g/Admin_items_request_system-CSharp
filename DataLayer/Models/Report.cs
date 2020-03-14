@@ -6,6 +6,7 @@ namespace DataLayer.Models
 {
     public class Report
     {
+        // transaction for the reports form
         public int emp_no { get; set; }
         public string name { get; set; }
         public string job { get; set; }

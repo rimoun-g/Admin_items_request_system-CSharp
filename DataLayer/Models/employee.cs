@@ -6,6 +6,7 @@ namespace DataLayer.Models
 {
     public class employee
     {
+        // employee information
         public int id { get; set; }
         public int code { get; set; }
         public string name { get; set; }

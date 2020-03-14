@@ -13,8 +13,14 @@ namespace DataLayer.code
     public class user_code: db_connection, Iuser
     {
         users_quer users_Quer = new users_quer();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="user">add user class with all information</param>
+        /// <returns>the user class</returns>
         public user AddUser(user user)
         {
+
             using (var cnn = db_connect())
             {
                 cnn.Open();
@@ -24,8 +30,15 @@ namespace DataLayer.code
             }
         }
 
+        /// <summary>
+        /// add a new user to the users table
+        /// </summary>
+        /// <param name="name">user name</param>
+        /// <param name="password">password</param>
+        /// <param name="level">administration level</param>
         public void add_user(string name, string password, int level)
         {
+            
             user new_user = new user();
             new_user.level = level;
             new_user.user_name = name;
@@ -33,7 +46,11 @@ namespace DataLayer.code
             AddUser(new_user);
 
         }
-
+        /// <summary>
+        /// update a specific user based on its id
+        /// </summary>
+        /// <param name="user">user class</param>
+        /// <returns>user class</returns>
         public user UpdateUser(user user)
         {
             using (var cnn = db_connect())
@@ -46,6 +63,11 @@ namespace DataLayer.code
         }
 
 
+        /// <summary>
+        /// collecting information for user update function
+        /// </summary>
+        /// <param name="inv_user">user class</param>
+        /// <param name="pw">setting the user password</param>
         public void Update_user(user inv_user, string pw)
         {
             user update_user = new user();
@@ -56,7 +78,10 @@ namespace DataLayer.code
             UpdateUser(update_user);
 
         }
-
+        /// <summary>
+        /// getting all users from the users table
+        /// </summary>
+        /// <returns>returns a list of user class</returns>
         public List<user> GetAllUsers()
         {
             using (var cnn = db_connect())
@@ -68,6 +93,11 @@ namespace DataLayer.code
             }
         }
 
+        /// <summary>
+        /// hashing the password using SHA256 encryption
+        /// </summary>
+        /// <param name="randomString"></param>
+        /// <returns>returns the has of the password</returns>
         public string sha256(string randomString)
         {
             var crypt = new SHA256Managed();
@@ -80,7 +110,11 @@ namespace DataLayer.code
             return hash;
         }
 
-
+        /// <summary>
+        /// get the user information using its username
+        /// </summary>
+        /// <param name="user_name"></param>
+        /// <returns>returns the user information included in user class</returns>
         public user GetUserByName(string user_name)
         {
             using (var cnn = db_connect())
