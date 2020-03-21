@@ -11,6 +11,9 @@ For many businesses, there are employees who recieve items to be used by them. T
 Basic plan of the project:
 ![alt text]( https://i.imgur.com/PMvPJog.jpg "Basic plan of the project")
 
+## DB Schema:
+![DB Schema]( https://i.imgur.com/N8zyy8G.jpg "DB Schema")
+
 ## Implementation:
 The application has three main windows:  
 1. **Transactions:**
@@ -34,4 +37,4 @@ The application has three main windows:
 3.Application Layer  
 
 ## SQL:
-The used databse to store records is a Sqlite file, however the same can be done with Sql server.
+The used databse to store records is a Sqlite file, however the same can be done with Sql server.  
